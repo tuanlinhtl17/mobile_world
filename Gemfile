@@ -19,6 +19,7 @@ gem "i18n"
 gem "jquery-rails", "~> 4.3", ">= 4.3.1"
 gem "bootstrap-sass", "~> 3.3.7"
 gem "ratyrate"
+gem "font-awesome-rails"
 
 group :development, :test do
   gem "byebug", platforms: [:mri, :mingw, :x64_mingw]
