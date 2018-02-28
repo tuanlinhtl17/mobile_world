@@ -4,7 +4,7 @@
     <div class="breadcrumbs-main">
       <ol class="breadcrumb">
         <li><%= link_to "Home", root_path %></li>
-        <li class="active"><%= t ".resend_confirmation_instructions" %></li>
+        <li class="active"><%= t('.resend_unlock_instructions') %></li>
       </ol>
     </div>
   </div>
@@ -13,19 +13,19 @@
 <div class="account">
   <div class="container">
   <div class="account-top heading">
-      <h2><%= t ".resend_confirmation_instructions" %></h2>
+      <h2><%= t('.resend_unlock_instructions') %></h2>
     </div>
     <div class="account-main">
-      <%= form_for(resource, as: resource_name, url: confirmation_path(resource_name), html: { method: :post }) do |f| %>
+      <%= form_for(resource, as: resource_name, url: unlock_path(resource_name), html: { method: :post }) do |f| %>
         <%= devise_error_messages! %>
         <div class="col-md-6 account-left">
           <div class="field">
             <%= f.label :email %><br />
-            <%= f.email_field :email, autofocus: true, autocomplete: "email", value: (resource.pending_reconfirmation? ? resource.unconfirmed_email : resource.email) %>
+            <%= f.email_field :email, autofocus: true, autocomplete: "email" %>
           </div>
 
           <div class="address">
-            <%= f.submit t ".resend_confirmation_instructions" %>
+            <%= f.submit t('.resend_unlock_instructions') %>
           </div>
         </div>
         <div class="col-md-6 account-left">

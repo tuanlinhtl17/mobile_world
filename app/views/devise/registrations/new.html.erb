@@ -1,29 +1,66 @@
-<h2>Sign up</h2>
-
-<%= form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
-  <%= devise_error_messages! %>
-
-  <div class="field">
-    <%= f.label :email %><br />
-    <%= f.email_field :email, autofocus: true, autocomplete: "email" %>
+<!--start-breadcrumbs-->
+<div class="breadcrumbs">
+  <div class="container">
+    <div class="breadcrumbs-main">
+      <ol class="breadcrumb">
+        <li><%= link_to "Home", root_path %></li>
+        <li class="active"><%= t('.sign_up') %></li>
+      </ol>
+    </div>
   </div>
+</div>
+<!--end-breadcrumbs-->
+<!--register-starts-->
+<div class="register">
+  <div class="container">
+    <div class="register-top heading">
+      <h2><%= t('.sign_up') %></h2>
+    </div>
+    <div class="register-main">
+    <%= form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
+      <%= devise_error_messages! %>
+      <div class="col-md-6 account-left">
+        <div class="field">
+          <%= f.label :email %><br />
+          <%= f.email_field :email, autofocus: true, autocomplete: "email", tabindex: "1" %>
+        </div>
 
-  <div class="field">
-    <%= f.label :password %>
-    <% if @minimum_password_length %>
-    <em>(<%= @minimum_password_length %> characters minimum)</em>
-    <% end %><br />
-    <%= f.password_field :password, autocomplete: "off" %>
+        <div class="field">
+          <%= f.label :password %>
+          <% if @minimum_password_length %>
+          <em><%= t('devise.shared.minimum_password_length', count: @minimum_password_length) %></em>
+          <% end %><br />
+          <%= f.password_field :password, autocomplete: "off", tabindex: "2" %>
+        </div>
+
+        <div class="field">
+          <%= f.label :password_confirmation %><br />
+          <%= f.password_field :password_confirmation, autocomplete: "off", tabindex: "3" %>
+        </div>
+
+        <div class="field">
+          <%= f.label :address %><br />
+          <%= f.text_area :address, autofocus: true, autocomplete: "off", tabindex: "3" %>
+        </div>
+
+        <div class="field">
+          <%= f.label :phone_number %><br />
+          <%= f.text_field :phone_number, autofocus: true, autocomplete: "off", tabindex: "5" %>
+        </div>
+      </div>
+
+      <div class="col-md-6 account-left">
+        <%= render "devise/shared/links" %>
+      </div>
+      <div class="clearfix"></div>
+      <div class="address submit">
+        <%= f.submit t('.sign_up') %>
+      </div>
+    <% end %>
+    </div>
   </div>
+</div>
+<!--register-end-->
 
-  <div class="field">
-    <%= f.label :password_confirmation %><br />
-    <%= f.password_field :password_confirmation, autocomplete: "off" %>
-  </div>
 
-  <div class="actions">
-    <%= f.submit "Sign up" %>
-  </div>
-<% end %>
 
-<%= render "devise/shared/links" %>

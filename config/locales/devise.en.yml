@@ -2,6 +2,10 @@
 
 en:
   devise:
+    user:
+      edit:
+        title: Update address and phone number
+        paragraph: Please update the information so that our delivery service to serve you in the best way
     confirmations:
       confirmed: "Your email address has been successfully confirmed."
       send_instructions: "You will receive an email with instructions for how to confirm your email address in a few minutes."

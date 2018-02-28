@@ -7,3 +7,10 @@ en:
       card: "Empty Cart"
       mobile_world: "Mobile World"
       search: "Search"
+  views:
+    header:
+      sign_in: "Login"
+      sign_up: "Register"
+      sign_out: "Logout"
+      edit: "Edit information"
+      profile: "Profile"
