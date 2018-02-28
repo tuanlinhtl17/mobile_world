@@ -1,0 +1,21 @@
+@import "bootstrap-sprockets";
+@import "bootstrap";
+@import "font-awesome";
+
+$white: #fff;
+$header-yellow: #fed700;
+.fix-padding-header-brand {
+  padding-left: 10px;
+}
+
+.navbar-inverse .navbar-brand {
+    color: $white;
+}
+
+.navbar-default {
+  background-color: $header-yellow;
+}
+
+.navbar-nav li:hover {
+  background-color: $white;
+}

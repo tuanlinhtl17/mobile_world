@@ -3,14 +3,17 @@
   <head>
     <title>MobileWorld</title>
     <%= csrf_meta_tags %>
-
-    <%= stylesheet_link_tag    "application", media: "all", "data-turbolinks-track": "reload" %>
-    <%= javascript_include_tag "application", "data-turbolinks-track": "reload" %>
+    <%= stylesheet_link_tag "application", media: "all" %>
+    <%= javascript_include_tag "application" %>
   </head>
 
   <body>
-    <p class="notice"><%= notice %></p>
-    <p class="alert"><%= alert %></p>
-    <%= yield %>
+    <%= render "layouts/header"%>
+    <div class="container">
+      <p class="notice"><%= notice %></p>
+      <p class="alert"><%= alert %></p>
+      <h1>abc</h1>
+      <%= yield %>
+    </div>
   </body>
 </html>
