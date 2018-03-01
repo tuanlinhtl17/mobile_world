@@ -1,2 +1,9 @@
 en:
-  hello: "Hello world"
+  layouts:
+    header:
+      language: "Language"
+      english: "English"
+      vietnamese: "Vietnamese"
+      card: "Empty Cart"
+      mobile_world: "Mobile World"
+      search: "Search"
