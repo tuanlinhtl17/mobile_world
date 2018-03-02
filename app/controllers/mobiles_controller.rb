@@ -1,4 +1,4 @@
 class MobilesController < ApplicationController
-  def show
+  def index
   end
 end
