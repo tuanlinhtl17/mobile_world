@@ -59,7 +59,8 @@ ActiveRecord::Schema.define(version: 20180228121852) do
     t.integer "behind_camera"
     t.integer "weight"
     t.integer "battery"
-    t.integer "resolution"
+    t.integer "resolution_width"
+    t.integer "resolution_height"
     t.string "description"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
