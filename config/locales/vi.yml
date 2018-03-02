@@ -1,2 +1,9 @@
 vi:
-  hello: "Hello world"
+  layouts:
+    header:
+      language: "Ngôn ngữ"
+      english: "Tiếng Anh"
+      vietnamese: "Tiếng Việt"
+      card: "Giỏ Hàng"
+      mobile_world: "Thế giới di động"
+      search: "Tìm Kiếm"

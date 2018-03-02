@@ -5,15 +5,13 @@
     <%= csrf_meta_tags %>
     <%= stylesheet_link_tag "application", media: "all" %>
     <%= javascript_include_tag "application" %>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
   </head>
 
   <body>
     <%= render "layouts/header"%>
-    <div class="container">
-      <p class="notice"><%= notice %></p>
-      <p class="alert"><%= alert %></p>
-      <h1>abc</h1>
-      <%= yield %>
-    </div>
+    <%= yield %>
+    <%= render "layouts/footer"%>
   </body>
 </html>

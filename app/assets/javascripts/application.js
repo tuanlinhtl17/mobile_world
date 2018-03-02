@@ -14,4 +14,9 @@
 //= require jquery.raty
 //= require ratyrate
 //= require rails-ujs
-//= require_tree .
+//= require simpleCart.min
+//= require memenu
+//= require jquery.easydropdown
+//= require responsiveslides.min
+//= require imagezoom
+//= require layout
