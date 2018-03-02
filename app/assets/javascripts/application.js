@@ -20,3 +20,4 @@
 //= require responsiveslides.min
 //= require imagezoom
 //= require layout
+//= require jquery.flexslider
