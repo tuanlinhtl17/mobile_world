@@ -4,6 +4,13 @@
 
 $white: #fff;
 $header-yellow: #fed700;
+
+body {
+  textarea {
+    resize: none;
+  }
+}
+
 .fix-padding-header-brand {
   padding-left: 10px;
 }
@@ -18,4 +25,8 @@ $header-yellow: #fed700;
 
 .navbar-nav li:hover {
   background-color: $white;
+}
+
+.layout {
+  margin-top: 5%;
 }
