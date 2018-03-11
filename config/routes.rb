@@ -5,7 +5,9 @@ Rails.application.routes.draw do
     root to: "pages#index"
     resources :mobiles
     resources :makers
+    get "/search" => "mobiles#search"
   end
-  
-  devise_for :users, controllers: { omniauth_callbacks: "user/omniauth_callbacks" }
+
+  devise_for :users, controllers: { omniauth_callbacks: "user/omniauth_callbacks",
+                                    registrations: "registrations" }
 end

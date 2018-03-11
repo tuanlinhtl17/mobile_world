@@ -14,3 +14,17 @@ en:
       sign_out: "Logout"
       edit: "Edit information"
       profile: "Profile"
+      home: "Home"
+    search:
+      search: "Search"
+      amount: "Found %{amount} matching products"
+      not_found: "No matches found"
+      price:
+        price: "Price"
+        cheap: "Cheap"
+        normal: "Common"
+        high_level: "High level"
+        below_1_million: "Below 1 million vnd"
+        over_9_million: "Over 9 million vnd"
+        from_to: "From %{min} to %{max} million vnd"
+      maker: "Maker"

@@ -1,0 +1,15 @@
+<a href="#"><%= t "views.search.maker" %></a>
+<div class="mepanel">
+  <div class="row">
+    <% makers.each do |maker| %>
+      <div class="col1 me-one">
+        <h4><%= link_to maker.name, mobiles_path(search: maker.name) %></h4>
+        <ul>
+          <li><%= link_to t("views.search.price.below_1_million"), mobiles_path(min: 0, max: 1000000, search: maker.name) %></li>
+          <li><%= link_to t("views.search.price.from_to", min: 1, max: 3), mobiles_path(min: 1000000, max: 3000000, search: maker.name) %></li>
+          <li><%= link_to t("views.search.price.from_to", min: 3, max: 5), mobiles_path(min: 3000000, max: 5000000, search: maker.name) %></li>
+        </ul>
+      </div>
+    <% end %>
+  </div>
+</div>

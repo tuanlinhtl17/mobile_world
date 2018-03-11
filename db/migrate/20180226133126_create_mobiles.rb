@@ -13,7 +13,8 @@ class CreateMobiles < ActiveRecord::Migration[5.1]
       t.integer :resolution_width
       t.integer :resolution_height
       t.string :description
-
+      t.string :ram
+      
       t.timestamps
     end
   end
