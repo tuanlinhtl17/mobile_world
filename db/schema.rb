@@ -12,10 +12,13 @@
 
 ActiveRecord::Schema.define(version: 20180228124325) do
 
+  # These are extensions that must be enabled in order to support this database
+  enable_extension "plpgsql"
+
   create_table "average_caches", force: :cascade do |t|
-    t.integer "rater_id"
+    t.bigint "rater_id"
     t.string "rateable_type"
-    t.integer "rateable_id"
+    t.bigint "rateable_id"
     t.float "avg", null: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
@@ -28,8 +31,8 @@ ActiveRecord::Schema.define(version: 20180228124325) do
     t.integer "parent_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.integer "user_id"
-    t.integer "mobile_id"
+    t.bigint "user_id"
+    t.bigint "mobile_id"
     t.index ["mobile_id"], name: "index_comments_on_mobile_id"
     t.index ["user_id"], name: "index_comments_on_user_id"
   end
@@ -39,7 +42,7 @@ ActiveRecord::Schema.define(version: 20180228124325) do
     t.boolean "is_avatar", default: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.integer "mobile_id"
+    t.bigint "mobile_id"
     t.index ["mobile_id"], name: "index_images_on_mobile_id"
   end
 
@@ -62,9 +65,10 @@ ActiveRecord::Schema.define(version: 20180228124325) do
     t.integer "resolution_width"
     t.integer "resolution_height"
     t.string "description"
+    t.string "ram"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.integer "maker_id"
+    t.bigint "maker_id"
     t.index ["maker_id"], name: "index_mobiles_on_maker_id"
   end
 
@@ -73,8 +77,8 @@ ActiveRecord::Schema.define(version: 20180228124325) do
     t.integer "price"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.integer "order_id"
-    t.integer "mobile_id"
+    t.bigint "order_id"
+    t.bigint "mobile_id"
     t.index ["mobile_id"], name: "index_order_details_on_mobile_id"
     t.index ["order_id"], name: "index_order_details_on_order_id"
   end
@@ -84,13 +88,13 @@ ActiveRecord::Schema.define(version: 20180228124325) do
     t.string "address"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.integer "user_id"
+    t.bigint "user_id"
     t.index ["user_id"], name: "index_orders_on_user_id"
   end
 
   create_table "overall_averages", force: :cascade do |t|
     t.string "rateable_type"
-    t.integer "rateable_id"
+    t.bigint "rateable_id"
     t.float "overall_avg", null: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
@@ -98,9 +102,9 @@ ActiveRecord::Schema.define(version: 20180228124325) do
   end
 
   create_table "rates", force: :cascade do |t|
-    t.integer "rater_id"
+    t.bigint "rater_id"
     t.string "rateable_type"
-    t.integer "rateable_id"
+    t.bigint "rateable_id"
     t.float "stars", null: false
     t.string "dimension"
     t.datetime "created_at", null: false
@@ -112,7 +116,7 @@ ActiveRecord::Schema.define(version: 20180228124325) do
 
   create_table "rating_caches", force: :cascade do |t|
     t.string "cacheable_type"
-    t.integer "cacheable_id"
+    t.bigint "cacheable_id"
     t.float "avg", null: false
     t.integer "qty", null: false
     t.string "dimension"
@@ -126,8 +130,8 @@ ActiveRecord::Schema.define(version: 20180228124325) do
     t.integer "amount"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.integer "shop_id"
-    t.integer "mobile_id"
+    t.bigint "shop_id"
+    t.bigint "mobile_id"
     t.index ["mobile_id"], name: "index_shop_mobiles_on_mobile_id"
     t.index ["shop_id"], name: "index_shop_mobiles_on_shop_id"
   end
@@ -170,4 +174,13 @@ ActiveRecord::Schema.define(version: 20180228124325) do
     t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
   end
 
+  add_foreign_key "comments", "mobiles"
+  add_foreign_key "comments", "users"
+  add_foreign_key "images", "mobiles"
+  add_foreign_key "mobiles", "makers"
+  add_foreign_key "order_details", "mobiles"
+  add_foreign_key "order_details", "orders"
+  add_foreign_key "orders", "users"
+  add_foreign_key "shop_mobiles", "mobiles"
+  add_foreign_key "shop_mobiles", "shops"
 end

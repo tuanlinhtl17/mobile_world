@@ -21,3 +21,5 @@
 //= require imagezoom
 //= require layout
 //= require jquery.flexslider
+//= require popper.min
+//= require header-search

@@ -1,9 +1,7 @@
-@import "bootstrap-sprockets";
-@import "bootstrap";
-@import "font-awesome";
-
-$white: #fff;
-$header-yellow: #fed700;
+@import 'bootstrap-sprockets';
+@import 'bootstrap';
+@import 'font-awesome';
+@import 'color';
 
 body {
   textarea {
@@ -11,22 +9,70 @@ body {
   }
 }
 
-.fix-padding-header-brand {
-  padding-left: 10px;
+.header-bottom {
+  background-color: $blue;
+  margin-bottom: 3%;
 }
 
-.navbar-inverse .navbar-brand {
-    color: $white;
+.header-logo img {
+  width: 15%;
+  height: 15%;
+  display: inline-block;
+  margin-right: 5%;
 }
 
-.navbar-default {
-  background-color: $header-yellow;
+.header-right {
+  margin-top: 2%;
 }
 
-.navbar-nav li:hover {
+.search-maker {
+  padding-left: 5%;
+  padding-right: 5%;
+  display: inline-block;
+}
+
+.search-bar input[type="text"] {
   background-color: $white;
+  border: solid;
+  border-width: thin;
 }
 
-.layout {
-  margin-top: 5%;
+#mobile_search_list {
+  font-size: 2em;
+  a {
+    text-decoration: none;
+  }
+}
+
+#mobile_search_list a {
+  display: inline !important;
+  align-items: baseline;
+}
+
+ul {
+  list-style: none;
+}
+
+.wrap-suggestion li {
+    display: block;
+    background: $white;
+    overflow: hidden;
+    list-style: none;
+    border-bottom: 1px dotted $gray;
+}
+
+.wrap-suggestion li a {
+    display: block;
+    overflow: hidden;
+    padding: 6px;
+    font-size: 12px;
+}
+
+.wrap-suggestion img {
+  width: 50px;
+  height: 50px;
+}
+
+.popover {
+  max-width: 100%;
 }
