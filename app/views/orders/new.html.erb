@@ -1,0 +1,59 @@
+<!--start-breadcrumbs-->
+<div class="breadcrumbs">
+  <div class="container">
+    <div class="breadcrumbs-main">
+      <ol class="breadcrumb">
+        <li><%= link_to t("views.carts.index.home"), root_path %></li>
+        <li class="active"><%= t "views.orders.new.order" %></li>
+      </ol>
+    </div>
+  </div>
+</div>
+<!--end-breadcrumbs-->
+<!--start-ckeckout-->
+<div class="ckeckout">
+  <div class="container">
+    <div class="ckeckout-top">
+      <div class="col-md-7">
+        <div class="cart-items">
+          <h3><%= t "views.orders.new.order_address" %></h3><br/>
+          <%= form_for @order do |f| %>
+            <%= f.label :name, t("views.orders.new.name") %>
+            <%= f.text_field :name, class: "form-control" %><br/>
+            <%= f.label :address, t("views.orders.new.user_address") %><br/>
+            <%= f.text_area :address, class: "form-control", value: "#{current_user.address}"%><br/>
+            <%= f.label :phone_number, t("views.orders.new.user_address") %><br/>
+            <%= f.text_field :phone_number, class: "form-control", value: "#{current_user.phone_number}" %><br/><br/>
+            <%= f.submit t("views.orders.new.order"), class: "btn btn-primary" %>
+          <% end %><br/>
+        </div>
+      </div>
+      <div class="col-md-5">
+        <div class="cart-items">
+          <h3><%= t "views.orders.new.order_info" %>&nbsp(<%= @cart.count %>&nbsp<%= t "views.orders.new.item" %>)</h3><br/>
+          <table class="table">
+            <thead>
+              <tr>
+                <th><%= t "views.carts.index.product_name" %></th>
+                <th><%= t "views.carts.index.quantity" %></th>
+                <th><%= t "views.carts.index.unit_price" %></th>
+                <th><%= t "views.carts.index.color" %></th>
+              </tr>
+            </thead>
+            <tbody>
+              <%= render partial: "mobile", collection: @mobiles %>
+            </tbody>
+            <thead>
+              <tr>
+                <th><%= t "views.carts.index.total_price" %></th>
+                <th></th>
+                <th colspan="2" class= "total_order_price"></th>
+              </tr>
+            </thead>
+          </table>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<!--end-ckeckout-->

@@ -2,8 +2,8 @@
   <div class="container">
     <div class="breadcrumbs-main">
       <ol class="breadcrumb">
-        <li><a href="index.html">Home</a></li>
-        <li class="active">Single</li>
+        <li><%= link_to t("views.carts.index.home"), root_path %></li>
+        <li class="active"><%= t "views.carts.index.item" %></li>
       </ol>
     </div>
   </div>
@@ -39,7 +39,7 @@
         </div>
         <div class="col-md-7 single-top-right">
           <div class="single-para simpleCart_shelfItem">
-          <h2>Lorem Ipsum</h2>
+          <h2><%= @mobile.name %></h2>
             <div class="star-on">
               <ul class="star-footer">
                   <li><a href="#"><i> </i></a></li>
@@ -55,34 +55,20 @@
             <div class="clearfix"> </div>
             </div>
 
-            <h5 class="item_price">$ 95.00</h5>
-            <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat.</p>
+            <h5 class="item_price"><span id="mobile-price-<%= @mobile.id %>">
+              <%= number_with_delimiter @mobile.price, delimiter: "," %></span>&nbspVND</span>
+            </h5>
+            <p><%= @mobile.description %></p>
             <div class="available">
               <ul>
-                <li>Color
-                  <select>
-                  <option>Silver</option>
-                  <option>Black</option>
-                  <option>Dark Black</option>
-                  <option>Red</option>
-                </select></li>
-              <li class="size-in">Size<select>
-                <option>Large</option>
-                <option>Medium</option>
-                <option>small</option>
-                <option>Large</option>
-                <option>small</option>
-              </select></li>
+                <li><%= t "views.carts.index.color" %>
+                  <%= select_tag "show-color", options_from_collection_for_select(@mobile.colors, "id", "color", "0"), {class: "form-control"} %>
+                </li>
               <div class="clearfix"> </div>
             </ul>
           </div>
-            <ul class="tag-men">
-              <li><span>TAG</span>
-              <span class="women1">: Women,</span></li>
-              <li><span>SKU</span>
-              <span class="women1">: CK09</span></li>
-            </ul>
-              <a href="#" class="add-cart item_add">ADD TO CART</a>
+            <input id=<%= @mobile.id %> class="quantity order-quantity-<%= @mobile.id %>" type="number" min="1" style="width: 150px" value="1"></span>
+              <a class="add-cart item_add"  id="<%= @mobile.id %>" onclick= "add_to_cart(this)"><%= t "views.mobiles.show.add_to_cart" %></a>
           </div>
         </div>
         <div class="clearfix"> </div>

@@ -25,4 +25,8 @@ class MobilesController < ApplicationController
       format.js
     end
   end
+  
+  def show
+    @mobile = Mobile.find_by id: params[:id]
+  end
 end

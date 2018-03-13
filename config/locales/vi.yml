@@ -1,4 +1,11 @@
 vi:
+  flash:
+    order_success: "Bạn đã đặt hàng thành công!"
+    order_error: "Vui lòng điền đầy đủ thông tin cần thiết để đặt hàng!"
+    cart_nil: "Vui lòng chọn sản phẩm để đặt hàng!"
+    check_quantity: "Số lượng không được nhỏ hơn 1 hoặc lớn hơn 10"
+    delete_item_error: "Lỗi không thể xóa sản phẩm này"
+    add_to_cart: "Thêm vào giỏ hàng thành công"
   layouts:
     header:
       language: "Ngôn ngữ"
@@ -8,6 +15,8 @@ vi:
       mobile_world: "Thế giới di động"
       search: "Tìm Kiếm"
   views:
+    shared:
+      explore_now: "Khám phá ngay"
     header:
       sign_in: "Đăng nhập"
       sign_up: "Đăng ký"
@@ -28,3 +37,30 @@ vi:
         over_9_million: "Trên 9 triệu"
         from_to: "Từ %{min} đến %{max} triệu"
       maker: "Hãng sản xuất"
+    carts:
+      index:
+        home: "Trang chủ"
+        shopping_cart: "Giỏ hàng"
+        go_home: "Mua thêm sản phẩm khác"
+        item: "Sảm phẩm"
+        product_name: "Tên sản phẩm"
+        quantity: "Số lượng"
+        unit_price: "Đơn giá"
+        color: "Màu sắc"
+        total_price: "Tổng tiền"
+        next: "Tiến hành đặt hàng"
+        no_item: "Không có sản phẩm trong giỏ hàng"
+        back_home: "TRỞ VỀ TRANG CHỦ"
+    orders:
+      new:
+        order: "Đặt hàng"
+        order_address: "Địa chỉ giao hàng"
+        name: "Tên của bạn:"
+        user_address: "Địa chỉ của bạn:"
+        your_phone: "Số điện thoại:"
+        order_info: "Thông tin sản phẩm"
+        item: "nhãn hàng"
+    mobiles:
+      show:
+        add_to_cart: "Thêm vào giỏ hàng"
+        cart_have: "Giỏ hàng có"

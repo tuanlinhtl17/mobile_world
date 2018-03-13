@@ -23,3 +23,8 @@
 //= require jquery.flexslider
 //= require popper.min
 //= require header-search
+//= require cart
+//= require orders
+//= require i18n
+//= require i18n.js
+//= require i18n/translations

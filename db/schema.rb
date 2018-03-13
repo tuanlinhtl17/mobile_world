@@ -26,6 +26,14 @@ ActiveRecord::Schema.define(version: 20180228124325) do
     t.index ["rater_id"], name: "index_average_caches_on_rater_id"
   end
 
+  create_table "colors", force: :cascade do |t|
+    t.string "color"
+    t.bigint "mobile_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["mobile_id"], name: "index_colors_on_mobile_id"
+  end
+
   create_table "comments", force: :cascade do |t|
     t.integer "value", default: 0
     t.integer "parent_id"
@@ -55,7 +63,6 @@ ActiveRecord::Schema.define(version: 20180228124325) do
   create_table "mobiles", force: :cascade do |t|
     t.string "name"
     t.integer "price"
-    t.string "color"
     t.integer "width"
     t.integer "height"
     t.integer "font_camera"
@@ -66,6 +73,7 @@ ActiveRecord::Schema.define(version: 20180228124325) do
     t.integer "resolution_height"
     t.string "description"
     t.string "ram"
+    t.string "cover_image"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.bigint "maker_id"
@@ -79,6 +87,8 @@ ActiveRecord::Schema.define(version: 20180228124325) do
     t.datetime "updated_at", null: false
     t.bigint "order_id"
     t.bigint "mobile_id"
+    t.bigint "color_id"
+    t.index ["color_id"], name: "index_order_details_on_color_id"
     t.index ["mobile_id"], name: "index_order_details_on_mobile_id"
     t.index ["order_id"], name: "index_order_details_on_order_id"
   end
@@ -86,6 +96,10 @@ ActiveRecord::Schema.define(version: 20180228124325) do
   create_table "orders", force: :cascade do |t|
     t.integer "total_money", default: 0
     t.string "address"
+    t.string "name"
+    t.string "phone_number"
+    t.integer "status", default: 0
+    t.integer "payment_types", default: 0
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.bigint "user_id"
@@ -174,10 +188,12 @@ ActiveRecord::Schema.define(version: 20180228124325) do
     t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
   end
 
+  add_foreign_key "colors", "mobiles"
   add_foreign_key "comments", "mobiles"
   add_foreign_key "comments", "users"
   add_foreign_key "images", "mobiles"
   add_foreign_key "mobiles", "makers"
+  add_foreign_key "order_details", "colors"
   add_foreign_key "order_details", "mobiles"
   add_foreign_key "order_details", "orders"
   add_foreign_key "orders", "users"

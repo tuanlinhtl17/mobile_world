@@ -1,0 +1,6 @@
+<tr>
+  <td><%= mobile.name %></td>
+  <td class= "order_quantity"><%= find_exits_item(@cart, mobile.id.to_s)["quantity"] %></td>
+  <td class= "order_price" ><%= mobile.price %></td>
+  <td class= "color" ><%= find_color_mobile(@cart, mobile.id.to_s) %></td>
+</tr> 
