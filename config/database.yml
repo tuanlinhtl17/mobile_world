@@ -1,0 +1,24 @@
+default: &default
+  adapter: postgresql
+  encoding: unicode
+  pool: 5
+
+  # Important configs for cloud9, change password value
+  # to what you entered in the previous psql step.
+  template: template0
+  username: <%= ENV["DATABASE_USERNAME"] %>
+  password: <%= ENV["DATABASE_PASSWORD"] %>
+
+development:
+  <<: *default
+  database: mobile_world_development
+
+test:
+  <<: *default
+  database: mobile_world_test
+
+production:
+  <<: *default
+  database: mobile_world_production
+  username: mobile_world
+  password: <%= ENV["DATABASE_PASSWORD"] %>

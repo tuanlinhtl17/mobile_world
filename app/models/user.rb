@@ -1,4 +1,6 @@
 class User < ApplicationRecord
+  enum role: [:user, :admin]
+
   has_many :orders
   has_many :comments
   devise :database_authenticatable, :registerable,:confirmable, :lockable,

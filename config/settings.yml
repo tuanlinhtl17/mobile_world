@@ -7,3 +7,232 @@ order:
   total_money_nil: 0
 pages:
   limit_mobile: 8
+users:
+  -
+    email: normal_user@gmail.com
+    password: "123456"
+    password_confirmation: "123456"
+    role: 0
+    address: "Thanh Xuan - Thanh pho Ha Noi"
+    phone_number: "012345678"
+  -
+    email: admin@gmail.com
+    password: "123456"
+    password_confirmation: "123456"
+    role: 1
+    address: "Thanh Xuan - Thanh pho Ha Noi"
+    phone_number: "012345678"
+makers:
+  -
+    name: "Apple"
+  -
+    name: "Oppo"
+mobiles:
+  -
+    name: "iPhone 8 Plus 256GB"
+    ram: "2GB"
+    price: 1000000
+    width: "78.1 mm"
+    height: "158.4 mm"
+    front_camera: "12 MP"
+    behind_camera: "12 MP"
+    weight: 202
+    battery: "2691 mAh"
+    resolution_width: 1080
+    resolution_height: 1920
+    maker_id: 1
+    avatar: <%= Rails.root.join("app/assets/images/seed/mobiles/IP 8/avatar.png") %>
+  -
+    name: "iPhone Galaxy S8"
+    ram: "2GB"
+    price: 2000000
+    width: "78.1 mm"
+    height: "158.4 mm"
+    front_camera: "12 MP"
+    behind_camera: "12 MP"
+    weight: 202
+    battery: "2691 mAh"
+    resolution_width: 1080
+    resolution_height: 1920
+    maker_id: 1
+    avatar: <%= Rails.root.join("app/assets/images/seed/mobiles/Samsung S8/avatar.png") %>
+  -
+    name: "iPhone 6 Plus 256GB"
+    ram: "3GB"
+    price: 3400000
+    width: "78.1 mm"
+    height: "158.4 mm"
+    front_camera: "12 MP"
+    behind_camera: "12 MP"
+    weight: 202
+    battery: "2691 mAh"
+    resolution_width: 1080
+    resolution_height: 1920
+    maker_id: 1
+    avatar: <%= Rails.root.join("app/assets/images/seed/mobiles/IP 6 plus/avatar.png") %>
+  -
+    name: "iPhone 7 Plus 256GB"
+    ram: "2GB"
+    price: 8000000
+    width: "78.1 mm"
+    height: "158.4 mm"
+    front_camera: "12 MP"
+    behind_camera: "12 MP"
+    weight: 202
+    battery: "2691 mAh"
+    resolution_width: 1080
+    resolution_height: 1920
+    maker_id: 1
+    avatar: <%= Rails.root.join("app/assets/images/seed/mobiles/IP7 plus/avatar.png") %>
+  -
+    name: "iPhone 4 Plus"
+    ram: "2GB"
+    price: 4000000
+    width: "78.1 mm"
+    height: "158.4 mm"
+    front_camera: "12 MP"
+    behind_camera: "12 MP"
+    weight: 202
+    battery: "2691 mAh"
+    resolution_width: 1080
+    resolution_height: 1920
+    maker_id: 1
+    avatar: <%= Rails.root.join("app/assets/images/seed/mobiles/IP 4 plus/avatar.jpg") %>
+  -
+    name: "Oppo Neo 3"
+    ram: "3GB"
+    price: 5500000
+    width: "78.1 mm"
+    height: "158.4 mm"
+    front_camera: "12 MP"
+    behind_camera: "12 MP"
+    weight: 202
+    battery: "2691 mAh"
+    resolution_width: 1080
+    resolution_height: 1920
+    maker_id: 2
+    avatar: <%= Rails.root.join("app/assets/images/seed/mobiles/Oppo Neo 3/avatar.png") %>
+  -
+    name: "Oppo Neo 4"
+    ram: "2GB"
+    price: 8000000
+    width: "78.1 mm"
+    height: "158.4 mm"
+    front_camera: "12 MP"
+    behind_camera: "12 MP"
+    weight: 202
+    battery: "2691 mAh"
+    resolution_width: 1080
+    resolution_height: 1920
+    maker_id: 2
+    avatar: <%= Rails.root.join("app/assets/images/seed/mobiles/Oppo Neo 4/avatar.png") %>
+  -
+    name: "Oppo Neo 5"
+    ram: "3GB"
+    price: 800000
+    width: "78.1 mm"
+    height: "158.4 mm"
+    front_camera: "12 MP"
+    behind_camera: "12 MP"
+    weight: 202
+    battery: "2691 mAh"
+    resolution_width: 1080
+    resolution_height: 1920
+    maker_id: 2
+    avatar: <%= Rails.root.join("app/assets/images/seed/mobiles/Oppo Neo 5/avatar.png") %>
+  -
+    name: "Oppo Neo 6"
+    ram: "4GB"
+    price: 1300000
+    width: "78.1 mm"
+    height: "158.4 mm"
+    front_camera: "12 MP"
+    behind_camera: "12 MP"
+    weight: 202
+    battery: "2691 mAh"
+    resolution_width: 1080
+    resolution_height: 1920
+    maker_id: 2
+    avatar: <%= Rails.root.join("app/assets/images/seed/mobiles/Oppo Neo 6/avatar.png") %>
+  -
+    name: "Oppo Neo 7"
+    ram: "4GB"
+    price: 1400000
+    width: "78.1 mm"
+    height: "158.4 mm"
+    front_camera: "12 MP"
+    behind_camera: "12 MP"
+    weight: 202
+    battery: "2691 mAh"
+    resolution_width: 1080
+    resolution_height: 1920
+    maker_id: 2
+    avatar: <%= Rails.root.join("app/assets/images/seed/mobiles/Oppo Neo 7/avatar.png") %>
+colors:
+  -
+    name: "Trắng"
+  -
+    name: "Đen"
+  -
+    name: "Xám"
+mobile_colors:
+  -
+    mobile_id: 1
+    color_id: 1
+  -
+    mobile_id: 1
+    color_id: 2
+  -
+    mobile_id: 2
+    color_id: 1
+  -
+    mobile_id: 2
+    color_id: 3
+  -
+    mobile_id: 3
+    color_id: 3
+  -
+    mobile_id: 3
+    color_id: 2
+  -
+    mobile_id: 4
+    color_id: 1
+  -
+    mobile_id: 4
+    color_id: 3
+  -
+    mobile_id: 5
+    color_id: 2
+  -
+    mobile_id: 5
+    color_id: 3
+  -
+    mobile_id: 6
+    color_id: 1
+  -
+    mobile_id: 6
+    color_id: 2
+  -
+    mobile_id: 7
+    color_id: 1
+  -
+    mobile_id: 3
+    color_id: 1
+  -
+    mobile_id: 8
+    color_id: 2
+  -
+    mobile_id: 8
+    color_id: 1
+  -
+    mobile_id: 9
+    color_id: 1
+  -
+    mobile_id: 9
+    color_id: 2
+  -
+    mobile_id: 10
+    color_id: 1
+  -
+    mobile_id: 10
+    color_id: 3

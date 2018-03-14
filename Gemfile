@@ -27,6 +27,11 @@ gem "pg"
 gem "pg_search"
 gem "kaminari"
 gem "i18n-js"
+gem "rails_admin"
+gem "rails_admin-i18n"
+gem "carrierwave", "~> 1.0"
+gem "mini_magick"
+gem "ckeditor"
 
 group :development, :test do
   gem "byebug", platforms: [:mri, :mingw, :x64_mingw]

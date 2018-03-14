@@ -22,7 +22,7 @@
             <%= f.text_field :name, class: "form-control" %><br/>
             <%= f.label :address, t("views.orders.new.user_address") %><br/>
             <%= f.text_area :address, class: "form-control", value: "#{current_user.address}"%><br/>
-            <%= f.label :phone_number, t("views.orders.new.user_address") %><br/>
+            <%= f.label :phone_number, t("views.orders.new.your_phone") %><br/>
             <%= f.text_field :phone_number, class: "form-control", value: "#{current_user.phone_number}" %><br/><br/>
             <%= f.submit t("views.orders.new.order"), class: "btn btn-primary" %>
           <% end %><br/>

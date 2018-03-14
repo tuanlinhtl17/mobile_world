@@ -78,9 +78,9 @@ ul {
 }
 
 .shopping-cart {
-  position: fixed; 
-  bottom: 20px; 
-  right: 30px; 
+  position: fixed;
+  bottom: 20px;
+  right: 30px;
   z-index: 9999;
   border: 1px solid black;
   outline: none;
@@ -102,4 +102,8 @@ ul {
 .item_add:hover {
   cursor: pointer;
   text-decoration: none;
-} 
+}
+.product-main img {
+  width: 120px;
+  height: 180px;
+}

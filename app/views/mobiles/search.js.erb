@@ -1,7 +1,7 @@
 <% if @mobiles.present? %>
   <% @mobiles[0..4].each_with_index do |mobile, index| %>
     $('<%= "#search-#{index} a" %>').attr('href', '<%= mobile_url mobile %>');
-    $('<%= "#search-#{index} img" %>').attr('src', 'https://cdn.tgdd.vn/Products/Images/42/88537/samsung-galaxy-a7-2017-4-400x460.png');
+    $('<%= "#search-#{index} img" %>').attr('src', '<%= mobile.avatar %>');
     $('<%= "#search-#{index} span" %>').text('<%= mobile.name %>');
   <% end %>
 <% else %>
