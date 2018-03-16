@@ -8,16 +8,24 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     <link href="<%= image_path("favicon.ico") %>" rel="shortcut icon" />
+    <script type="text/javascript">
+      I18n.defaultLocale = "<%= I18n.default_locale %>";
+      I18n.locale = "<%= I18n.locale %>";
+    </script>    
   </head>
 
   <body>
-    <% if notice %>
-      <div class="alert alert-success text-center"><%= notice %></div>
-    <% elsif alert %>
-      <div class="alert alert-danger text-center"><%= alert %></div>
-    <% end %>
     <%= render "layouts/header"%>
     <div class="container">
+      <% if notice %>
+        <div class="alert alert-success text-center"><%= notice %></div>
+      <% elsif alert %>
+        <div class="alert alert-danger text-center"><%= alert %></div>
+      <% else flash %>
+        <% flash.each do |message_type, message| %>
+          <div class="alert alert-<%= message_type %>"><%= message %></div>
+        <% end %>
+      <% end %>
       <%= yield %>
     </div>
     <%= render "layouts/footer"%>

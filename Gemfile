@@ -26,6 +26,7 @@ gem "figaro"
 gem "pg"
 gem "pg_search"
 gem "kaminari"
+gem "i18n-js"
 
 group :development, :test do
   gem "byebug", platforms: [:mri, :mingw, :x64_mingw]

@@ -3,7 +3,6 @@ class CreateMobiles < ActiveRecord::Migration[5.1]
     create_table :mobiles do |t|
       t.string :name
       t.integer :price
-      t.string :color
       t.integer :width
       t.integer :height
       t.integer :font_camera
@@ -15,6 +14,8 @@ class CreateMobiles < ActiveRecord::Migration[5.1]
       t.string :description
       t.string :ram
       
+      t.string :cover_image
+
       t.timestamps
     end
   end

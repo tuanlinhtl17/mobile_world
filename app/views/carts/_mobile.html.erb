@@ -1,0 +1,16 @@
+<ul class="cart-header order-mobile-<%= mobile.id %>">
+  <div class="close1" onclick="remove_item(this)" id=<%= mobile.id %>> </div>
+    <li class="ring-in">
+      <a href="single.html" >
+        <%= image_tag mobile.cover_image, class: "img-responsive" %>
+      </a>
+    </li>
+    <li><span class="name"><%= mobile.name %></span>
+      <%= select_tag mobile.id, options_from_collection_for_select(mobile.colors, "id", "color", find_exits_item(@cart, mobile.id.to_s)["color_id"]), {class: "color color-#{mobile.id}"}%>
+    </li>
+    <li><span class="cost">
+      <input id=<%= mobile.id %> class="quantity form-control order-quantity-<%= mobile.id %>" type="number" min="1" style="width: 150px" value="<%= find_exits_item(@cart, mobile.id.to_s)["quantity"] %>"></span>
+    </li>
+    <li><span class="cost price"><%= mobile.price %>&nbspVND</span></li>
+  <div class="clearfix"> </div>
+</ul>

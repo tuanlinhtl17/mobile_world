@@ -123,6 +123,8 @@ GEM
     hashie (3.5.7)
     i18n (0.9.5)
       concurrent-ruby (~> 1.0)
+    i18n-js (3.0.5)
+      i18n (>= 0.6.6, < 2)
     inflecto (0.0.2)
     jbuilder (2.7.0)
       activesupport (>= 4.2.0)
@@ -287,6 +289,7 @@ DEPENDENCIES
   devise-i18n
   figaro
   font-awesome-rails
+  i18n-js
   jbuilder (~> 2.5)
   jquery-rails (~> 4.3, >= 4.3.1)
   kaminari
@@ -309,4 +312,4 @@ DEPENDENCIES
   web-console (>= 3.3.0)
 
 BUNDLED WITH
-   1.16.0
+   1.16.1

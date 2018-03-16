@@ -1,0 +1,53 @@
+<!--start-breadcrumbs-->
+<div class="breadcrumbs">
+  <div class="container">
+    <div class="breadcrumbs-main">
+      <ol class="breadcrumb">
+        <li><%= link_to t("views.carts.index.home"), root_path %></li>
+        <li class="active"><%= t "views.carts.index.shopping_cart" %></li>
+      </ol>
+    </div>
+  </div>
+</div>
+<% if @cart.present? %>
+  <!--end-breadcrumbs-->
+  <!--start-ckeckout-->
+  <div class="ckeckout">
+    <div class="container">
+      <div class="ckeck-top heading">
+        <h2><%= t "views.carts.index.shopping_cart" %></h2>
+      </div>
+      <div class="ckeckout-top">
+      <div class="cart-items">
+        <h5><%= link_to t("views.carts.index.go_home"), root_path %></h5>
+        <div class="in-check" >
+          <ul class="unit">
+            <li><span><%= t "views.carts.index.item" %></span></li>
+            <li><span><%= t "views.carts.index.product_name" %></span></li>
+            <li><span><%= t "views.carts.index.quantity" %></span></li>  
+            <li><span><%= t "views.carts.index.unit_price" %></span></li>
+            <div class="clearfix"> </div>
+          </ul>
+          <%= render partial: "mobile", collection: @mobiles %>
+          <ul class="cart-header">
+              <li class="ring-in"></li>
+              <li><span class="name"><%= t "views.carts.index.total_price" %></span></li>
+              <li><span class="cost"></span></li>
+              <li><span></span></li>
+              <li><span class="cost total_price"></span></li>
+            <div class="clearfix"> </div>
+          </ul>
+          <div class="col-md-9"></div>
+          <div class="col-md-3">
+            <%= link_to  t("views.carts.index.next"), new_order_path, class: "btn btn-primary next_order" %>
+          </div>
+        </div>
+      </div>
+     </div>
+    </div>
+  </div>
+  <!--end-ckeckout-->
+<% else %>
+  <h1 class= "text-center"><%= t "views.carts.index.no_item" %></h1>
+  <div class= "text-center"><%= link_to t("views.carts.index.back_home"), root_path, class: "text-center btn btn-primary" %></div>
+<% end %>

@@ -1,4 +1,11 @@
 en:
+  flash:
+    order_success: "Your order success!"
+    order_error: "Please fill all information necessary!"
+    cart_nil: "Please pick items in your cart!"
+    check_quantity: "Quantity can't less than 1 or greater than 10"
+    delete_item_error: "Delete error!"
+    add_to_cart: "Success add to cart"
   layouts:
     header:
       language: "Language"
@@ -8,6 +15,8 @@ en:
       mobile_world: "Mobile World"
       search: "Search"
   views:
+    shared:
+      explore_now: "Explore Now"
     header:
       sign_in: "Login"
       sign_up: "Register"
@@ -28,3 +37,30 @@ en:
         over_9_million: "Over 9 million vnd"
         from_to: "From %{min} to %{max} million vnd"
       maker: "Maker"
+    carts:
+      index:
+        home: "Home"
+        shopping_cart: "Shopping Cart"
+        go_home: "Go home to buy more items"
+        item: "Item"
+        product_name: "Product Name"
+        quantity: "Quantity"
+        unit_price: "Unit Price"
+        color: "Color"
+        total_price: "Total Price"
+        next: "Next to order"
+        no_item: "There are no item in cart"
+        back_home: "GO BACK HOME"
+    orders:
+      new:
+        order: "Order"
+        order_address: "Order's Address"
+        name: "Your Name"
+        user_address: "Your Address"
+        your_phone: "Your Phone Number"
+        order_info: "Order Infomation"
+        item: "items"
+    mobiles:
+      show:
+        add_to_cart: "ADD TO CART"
+        cart_have: "Cart have" 

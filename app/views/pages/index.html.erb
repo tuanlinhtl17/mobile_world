@@ -56,131 +56,21 @@
   <div class="container">
     <div class="product-top">
       <div class="product-one">
-        <div class="col-md-3 product-left">
-          <div class="product-main simpleCart_shelfItem">
-            <a href="single.html" class="mask">
-              <%= image_tag "p-1.jpg", class: "img-responsive zoom-img" %>
-            </a>
-            <div class="product-bottom">
-              <h3>Smart Watches</h3>
-              <p>Explore Now</p>
-              <h4><a class="item_add" href="#"><i></i></a> <span class=" item_price">$ 329</span></h4>
-            </div>
-            <div class="srch">
-              <span>-50%</span>
-            </div>
-          </div>
-        </div>
-        <div class="col-md-3 product-left">
-          <div class="product-main simpleCart_shelfItem">
-            <a href="single.html" class="mask">
-              <%= image_tag "p-1.jpg", class: "img-responsive zoom-img" %>
-            </a>
-            <div class="product-bottom">
-              <h3>Smart Watches</h3>
-              <p>Explore Now</p>
-              <h4><a class="item_add" href="#"><i></i></a> <span class=" item_price">$ 329</span></h4>
-            </div>
-            <div class="srch">
-              <span>-50%</span>
-            </div>
-          </div>
-        </div>
-        <div class="col-md-3 product-left">
-          <div class="product-main simpleCart_shelfItem">
-            <a href="single.html" class="mask">
-              <%= image_tag "p-1.jpg", class: "img-responsive zoom-img" %>
-            </a>
-            <div class="product-bottom">
-              <h3>Smart Watches</h3>
-              <p>Explore Now</p>
-              <h4><a class="item_add" href="#"><i></i></a> <span class=" item_price">$ 329</span></h4>
-            </div>
-            <div class="srch">
-              <span>-50%</span>
-            </div>
-          </div>
-        </div>
-        <div class="col-md-3 product-left">
-          <div class="product-main simpleCart_shelfItem">
-            <a href="single.html" class="mask">
-              <%= image_tag "p-1.jpg", class: "img-responsive zoom-img" %>
-            </a>
-            <div class="product-bottom">
-              <h3>Smart Watches</h3>
-              <p>Explore Now</p>
-              <h4><a class="item_add" href="#"><i></i></a> <span class=" item_price">$ 329</span></h4>
-            </div>
-            <div class="srch">
-              <span>-50%</span>
-            </div>
-          </div>
-        </div>
-        <div class="clearfix"></div>
-      </div>
-      <div class="product-one">
-        <div class="col-md-3 product-left">
-          <div class="product-main simpleCart_shelfItem">
-            <a href="single.html" class="mask">
-              <%= image_tag "p-1.jpg", class: "img-responsive zoom-img" %>
-            </a>
-            <div class="product-bottom">
-              <h3>Smart Watches</h3>
-              <p>Explore Now</p>
-              <h4><a class="item_add" href="#"><i></i></a> <span class=" item_price">$ 329</span></h4>
-            </div>
-            <div class="srch">
-              <span>-50%</span>
-            </div>
-          </div>
-        </div>
-        <div class="col-md-3 product-left">
-          <div class="product-main simpleCart_shelfItem">
-            <a href="single.html" class="mask">
-              <%= image_tag "p-1.jpg", class: "img-responsive zoom-img" %>
-            </a>
-            <div class="product-bottom">
-              <h3>Smart Watches</h3>
-              <p>Explore Now</p>
-              <h4><a class="item_add" href="#"><i></i></a> <span class=" item_price">$ 329</span></h4>
-            </div>
-            <div class="srch">
-              <span>-50%</span>
-            </div>
-          </div>
-        </div>
-        <div class="col-md-3 product-left">
-          <div class="product-main simpleCart_shelfItem">
-            <a href="single.html" class="mask">
-              <%= image_tag "p-1.jpg", class: "img-responsive zoom-img" %>
-            </a>
-            <div class="product-bottom">
-              <h3>Smart Watches</h3>
-              <p>Explore Now</p>
-              <h4><a class="item_add" href="#"><i></i></a> <span class=" item_price">$ 329</span></h4>
-            </div>
-            <div class="srch">
-              <span>-50%</span>
-            </div>
-          </div>
-        </div>
-        <div class="col-md-3 product-left">
-          <div class="product-main simpleCart_shelfItem">
-            <a href="single.html" class="mask">
-              <%= image_tag "p-1.jpg", class: "img-responsive zoom-img" %>
-            </a>
-            <div class="product-bottom">
-              <h3>Smart Watches</h3>
-              <p>Explore Now</p>
-              <h4><a class="item_add" href="#"><i></i></a> <span class=" item_price">$ 329</span></h4>
-            </div>
-            <div class="srch">
-              <span>-50%</span>
-            </div>
-          </div>
-        </div>
-        <div class="clearfix"></div>
+        <%= render partial: "shared/mobile", collection: @mobiles %>
       </div>
     </div>
   </div>
 </div>
+<% if @cart.present? %>
+  <%= link_to carts_path, class: "shopping-cart" do %>
+    <div class="row">
+      <div class="col-md-4">
+        <i class="fa fa-3x fa-shopping-cart" aria-hidden="true"></i>
+      </div>
+      <div class="col-md-8">
+        <strong><%= t "views.mobiles.show.cart_have" %></strong><br/>
+        <strong><%= @cart.count %>&nbsp<%= t "views.orders.new.item" %></strong>
+      </div>
+    </div>
+  <% end %>
+<% end %>

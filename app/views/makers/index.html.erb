@@ -194,3 +194,16 @@
   </div>
 </div>
 <!--product-end-->
+<% if @cart.present? %>
+  <%= link_to carts_path, class: "shopping-cart" do %>
+    <div class="row">
+      <div class="col-md-4">
+        <i class="fa fa-3x fa-shopping-cart" aria-hidden="true"></i>
+      </div>
+      <div class="col-md-8">
+        <strong>Cart have </strong><br/>
+        <strong><%= @cart.count %>&nbspItem</strong>
+      </div>
+    </div>
+  <% end %>
+<% end %>

@@ -3,3 +3,7 @@ phone_number:
   min_length: 8
 address:
   min_length: 10
+order:
+  total_money_nil: 0
+pages:
+  limit_mobile: 8
