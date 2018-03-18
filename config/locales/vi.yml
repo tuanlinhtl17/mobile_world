@@ -3,9 +3,20 @@ vi:
     order_success: "Bạn đã đặt hàng thành công!"
     order_error: "Vui lòng điền đầy đủ thông tin cần thiết để đặt hàng!"
     cart_nil: "Vui lòng chọn sản phẩm để đặt hàng!"
-    check_quantity: "Số lượng không được nhỏ hơn 1 hoặc lớn hơn 10"
+    check_quantity: "Số lượng không được nhỏ hơn 1"
     delete_item_error: "Lỗi không thể xóa sản phẩm này"
     add_to_cart: "Thêm vào giỏ hàng thành công"
+    create_comment_successs: "Bình luận của bạn đã được gửi"
+    create_comment_error: "Bình luận của bạn chưa được lưu"
+    delete_comment_successs: "Xóa bình luận thành công"
+    delete_comment_error: "Xóa bình luận thất bại"
+    confirm_delele: "Bạn có chắc muốn xóa bình luận này không?"
+    loading: "Tải tới trang tiếp theo..."
+    loading_error: "Tải trang bị lỗi, làm ơn thử lại"
+    end_loading: "Đã tải toàn bộ bình luận!"
+    please_login: "Làm ơn đăng nhập để comment"
+    load_mobile: "Không tìm thấy mobile với id: "
+    load_comment: "Không tìm thấy bình luận"
   layouts:
     header:
       language: "Ngôn ngữ"
@@ -65,6 +76,15 @@ vi:
       show:
         add_to_cart: "Thêm vào giỏ hàng"
         cart_have: "Giỏ hàng có"
+        comment: "Bình luận:"
+        more_comment: "Xem thêm"
+        comment_here: "Ý kiến của bạn"
+        submit: "Gửi"
+    comments:
+      comment:
+        ago: "trước"
+        load_more_comment: "Xem thêm comment"
+        reply: "Trả lời"
   admin:
     actions:
       bulk_delete:

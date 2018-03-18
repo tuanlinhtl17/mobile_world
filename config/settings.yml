@@ -7,6 +7,8 @@ order:
   total_money_nil: 0
 pages:
   limit_mobile: 8
+kaminari:
+  paginate_comment: 5
 users:
   -
     email: normal_user@gmail.com

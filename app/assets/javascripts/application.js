@@ -29,3 +29,6 @@
 //= require i18n.js
 //= require i18n/translations
 //= require ckeditor/init
+//= require comment
+//= require jquery.infinite-pages
+//= require comment-form

@@ -3,9 +3,20 @@ en:
     order_success: "Your order success!"
     order_error: "Please fill all information necessary!"
     cart_nil: "Please pick items in your cart!"
-    check_quantity: "Quantity can't less than 1 or greater than 10"
+    check_quantity: "Quantity can't less than 1"
     delete_item_error: "Delete error!"
     add_to_cart: "Success add to cart"
+    create_comment_successs: "Your comment was successfully added!"
+    create_comment_error: "Failed to add your comment"
+    delete_comment_successs: "Your comment was successfully deleted!"
+    delete_comment_error: "Failed to delete your comment"
+    confirm_delele: "Are your sure?"
+    loading: "Loading next page..."
+    loading_error: "There was an error, please try again"
+    end_loading: "That's all, folks!"
+    please_login: "please_login"
+    load_mobile: "Can't find mobile withd id: "
+    load_comment: "Can't find comment"
   layouts:
     header:
       language: "Language"
@@ -66,3 +77,12 @@ en:
       show:
         add_to_cart: "ADD TO CART"
         cart_have: "Cart have"
+        comment: "Comment:"
+        more_comment: "See More Comment"
+        comment_here: "Your comment here!"
+        submit: "Submit"
+    comments:
+      comment:
+        ago: "ago"
+        load_more_comment: "Load more comment"
+        reply: "Reply"

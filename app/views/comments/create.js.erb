@@ -1,0 +1,12 @@
+<% if @comment.id.nil? %>
+  alert(I18n.t("flash.create_comment_error"));
+<% else %>
+  <% if @comment.parent_id? %>
+    $(".comment-section-<%= @comment.parent_id %>").append("<div class='replies'><%= j render @comment %></div>");
+    $(".new_comment #comment_content").val("");
+    $("#form_nested_comment").hide();
+  <% else %>
+    $(".comment").prepend("<div class='comment-section-<%= @comment.id %>'><%= j render @comment %></div>");
+    $("#comment_content").val("");
+  <% end %>
+<% end %>
