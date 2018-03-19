@@ -1,4 +1,5 @@
 class User < ApplicationRecord
+  ratyrate_rater
   enum role: [:user, :admin]
 
   has_many :orders, dependent: :destroy
@@ -13,7 +14,7 @@ class User < ApplicationRecord
 
   validates :address, presence: true,
   length: {minimum: Settings.address.min_length}
-
+  
   class << self
     def from_omniauth auth
       @user = User.find_by email: auth.info.email
