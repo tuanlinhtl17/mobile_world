@@ -1,0 +1,2 @@
+$(".comment-section-<%= @comments[0].parent_id %> a.replies").remove();
+$(".comment-section-<%= @comments[0].parent_id %>").append("<div class='replies'><%=j render(partial: 'comments/comment', collection: @comments) %></div>");

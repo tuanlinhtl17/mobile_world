@@ -2,7 +2,7 @@ class User < ApplicationRecord
   enum role: [:user, :admin]
 
   has_many :orders
-  has_many :comments
+  has_many :comments, dependent: :destroy
   devise :database_authenticatable, :registerable,:confirmable, :lockable,
          :recoverable, :rememberable, :trackable, :validatable, :timeoutable,
          :omniauthable, omniauth_providers: [:facebook]

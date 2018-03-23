@@ -1,0 +1,12 @@
+<div class="form-group well">
+  <%= form_for @comment, remote: true do |f| %>
+    <%= f.hidden_field :mobile_id %>
+    <%= f.hidden_field :parent_id %>
+    <%= f.text_area :content, class: "form-control", 
+      placeholder: t("views.mobiles.show.comment_here") %><br/>
+    <div class="submit-comment">
+      <%= f.submit t("views.mobiles.show.submit"), 
+        class: "btn btn-primary submit-comment-form" %>
+    </div>
+  <% end %>
+</div>
