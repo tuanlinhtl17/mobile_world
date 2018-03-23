@@ -1,3 +1,4 @@
 class Color < ApplicationRecord
-  belongs_to :mobile
+  has_many :mobile_colors
+  has_many :mobiles, through: :mobile_colors
 end

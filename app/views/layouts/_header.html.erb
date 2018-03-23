@@ -11,7 +11,8 @@
                 <li class="grid"><%= render "layouts/ram_search" %></li>
                 <li class="grid"><%= render "layouts/maker_search" %></li>
                 <% if user_signed_in? %>
-                  <li><%= link_to t("views.header.edit"), edit_user_registration_path %></li>
+                  <li><%= link_to t("views.header.edit"), edit_user_registration_path unless current_user.admin? %></li>
+                  <li><%= link_to t("views.header.admin"), rails_admin.dashboard_path if current_user.admin? %></li>
                   <li><%= link_to t("views.header.sign_out"), destroy_user_session_path, method: :delete %></li>
                 <% else %>
                   <li><%= link_to t("views.header.sign_in"), new_user_session_path %></li>

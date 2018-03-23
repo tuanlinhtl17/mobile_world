@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20180228124325) do
+ActiveRecord::Schema.define(version: 20180318140901) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -28,10 +28,8 @@ ActiveRecord::Schema.define(version: 20180228124325) do
 
   create_table "colors", force: :cascade do |t|
     t.string "color"
-    t.bigint "mobile_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.index ["mobile_id"], name: "index_colors_on_mobile_id"
   end
 
   create_table "comments", force: :cascade do |t|
@@ -46,8 +44,7 @@ ActiveRecord::Schema.define(version: 20180228124325) do
   end
 
   create_table "images", force: :cascade do |t|
-    t.string "url"
-    t.boolean "is_avatar", default: false
+    t.string "mobile_image"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.bigint "mobile_id"
@@ -60,23 +57,33 @@ ActiveRecord::Schema.define(version: 20180228124325) do
     t.datetime "updated_at", null: false
   end
 
+  create_table "mobile_colors", force: :cascade do |t|
+    t.bigint "mobile_id"
+    t.bigint "color_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["color_id"], name: "index_mobile_colors_on_color_id"
+    t.index ["mobile_id"], name: "index_mobile_colors_on_mobile_id"
+  end
+
   create_table "mobiles", force: :cascade do |t|
     t.string "name"
     t.integer "price"
     t.integer "width"
     t.integer "height"
-    t.integer "font_camera"
+    t.integer "front_camera"
     t.integer "behind_camera"
     t.integer "weight"
     t.integer "battery"
     t.integer "resolution_width"
     t.integer "resolution_height"
-    t.string "description"
     t.string "ram"
-    t.string "cover_image"
+    t.string "description"
+    t.text "review"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.bigint "maker_id"
+    t.string "avatar"
     t.index ["maker_id"], name: "index_mobiles_on_maker_id"
   end
 
@@ -188,10 +195,11 @@ ActiveRecord::Schema.define(version: 20180228124325) do
     t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
   end
 
-  add_foreign_key "colors", "mobiles"
   add_foreign_key "comments", "mobiles"
   add_foreign_key "comments", "users"
   add_foreign_key "images", "mobiles"
+  add_foreign_key "mobile_colors", "colors"
+  add_foreign_key "mobile_colors", "mobiles"
   add_foreign_key "mobiles", "makers"
   add_foreign_key "order_details", "colors"
   add_foreign_key "order_details", "mobiles"

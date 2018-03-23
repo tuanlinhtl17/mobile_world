@@ -14,6 +14,8 @@ en:
       card: "Empty Cart"
       mobile_world: "Mobile World"
       search: "Search"
+      home: "Home"
+      admin: "Dashboard"
   views:
     shared:
       explore_now: "Explore Now"
@@ -63,4 +65,4 @@ en:
     mobiles:
       show:
         add_to_cart: "ADD TO CART"
-        cart_have: "Cart have" 
+        cart_have: "Cart have"
