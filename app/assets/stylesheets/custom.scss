@@ -112,6 +112,11 @@ ul {
   height: 180px;
 }
 
+.rslides img {
+  width: 1140px;
+  height: 427.5px;
+}
+
 .comment-section {
   position: relative;
   border: 2px solid $blue-light;
@@ -157,6 +162,7 @@ ul {
   background-color: $gray;
   color: black;
 }
+
 a.replies {
   cursor: pointer;
 }

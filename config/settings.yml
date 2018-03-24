@@ -9,6 +9,8 @@ pages:
   limit_mobile: 8
 kaminari:
   paginate_comment: 5
+ads:
+  max_display: 5
 users:
   -
     email: normal_user@gmail.com
@@ -238,3 +240,24 @@ mobile_colors:
   -
     mobile_id: 10
     color_id: 3
+advertisements:
+  -
+    title: "Đổi cũ lấy mới"
+    maker_id: 2
+    image: <%= Rails.root.join("app/assets/images/seed/advertisements/slide1.png") %>
+  -
+    title: "Giảm Iphone 1 triệu"
+    maker_id: 1
+    image: <%= Rails.root.join("app/assets/images/seed/advertisements/slide2.png") %>
+  -
+    title: "Samsung trả góp 0%"
+    maker_id: 2
+    image: <%= Rails.root.join("app/assets/images/seed/advertisements/slide3.png") %>
+  -
+    title: "Mua 3 tặng 1"
+    maker_id: 2
+    image: <%= Rails.root.join("app/assets/images/seed/advertisements/slide4.jpg") %>
+  -
+    title: "Happy new year 2018"
+    maker_id: 1
+    image: <%= Rails.root.join("app/assets/images/seed/advertisements/slide5.jpg") %>

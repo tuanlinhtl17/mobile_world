@@ -10,6 +10,7 @@ Rails.application.routes.draw do
     resources :orders, only: [:new, :create]
     get "/search" => "mobiles#search"
     post "/comment_children" => "comment_childrens#create"
+    patch "/advertisement" => "advertisements#update"
   end
 
   devise_for :users, controllers: { omniauth_callbacks: "user/omniauth_callbacks",

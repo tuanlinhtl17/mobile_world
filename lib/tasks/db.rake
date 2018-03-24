@@ -38,5 +38,10 @@ namespace :db do
       MobileColor.create mobile_id: mobile_color.mobile_id,
                           color_id: mobile_color.color_id
     end
+
+    Settings.advertisements.each do |ads|
+      Advertisement.create title: ads.title, maker_id: ads.maker_id,
+                           image: open(ads.image)
+    end
   end
 end

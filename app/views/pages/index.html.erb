@@ -2,15 +2,11 @@
 <div class="bnr" id="home">
   <div  id="top" class="callbacks_container">
     <ul class="rslides" id="slider4">
-      <li>
-        <%= image_tag "bnr-1.png" %>
-      </li>
-      <li>
-        <%= image_tag "bnr-2.png" %>
-      </li>
-      <li>
-        <%= image_tag "bnr-3.png" %>
-      </li>
+      <% @advertisements.each do |ads| %>
+        <li>
+          <%= link_to image_tag(ads.image, onclick: "adsClick(#{ads.id})"), ads.maker %>
+        </li>
+      <% end %>
     </ul>
   </div>
   <div class="clearfix"> </div>

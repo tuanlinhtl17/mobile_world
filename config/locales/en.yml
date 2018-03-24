@@ -86,3 +86,6 @@ en:
         ago: "ago"
         load_more_comment: "Load more comment"
         reply: "Reply"
+    makers:
+      error:
+        not_found: "Cannot find this maker"
