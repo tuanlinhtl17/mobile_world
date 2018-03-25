@@ -95,6 +95,10 @@ en:
         ram: "Ram"
         battery: "Battery"
         specifications: "Specifications"
+        older_price: "Old price"
+        newer_price: "New price"
+        remaining: "Discount program remaining"
+        days: "days"
     comments:
       comment:
         ago: "ago"

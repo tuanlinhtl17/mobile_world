@@ -20,5 +20,3 @@ test:
 production:
   <<: *default
   database: mobile_world_production
-  username: mobile_world
-  password: <%= ENV["DATABASE_PASSWORD"] %>

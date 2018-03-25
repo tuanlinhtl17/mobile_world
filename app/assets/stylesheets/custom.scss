@@ -3,10 +3,6 @@
 @import 'font-awesome';
 @import 'color';
 
-$white: #fff;
-$blue-light: #cde9ea;
-$gray: #f5f5f5;
-
 body {
   textarea {
     resize: none;
@@ -58,18 +54,18 @@ ul {
 }
 
 .wrap-suggestion li {
-    display: block;
-    background: $white;
-    overflow: hidden;
-    list-style: none;
-    border-bottom: 1px dotted $gray;
+  display: block;
+  background: $white;
+  overflow: hidden;
+  list-style: none;
+  border-bottom: 1px dotted $gray;
 }
 
 .wrap-suggestion li a {
-    display: block;
-    overflow: hidden;
-    padding: 6px;
-    font-size: 12px;
+  display: block;
+  overflow: hidden;
+  padding: 6px;
+  font-size: 12px;
 }
 
 .wrap-suggestion img {
@@ -98,15 +94,18 @@ ul {
 
 .information {
    padding-top: 30px;
- }
+}
+
 #show-color {
   margin-left: 0px !important;
   height: 44px !important;
 }
+
 .item_add:hover {
   cursor: pointer;
   text-decoration: none;
 }
+
 .product-main img {
   width: 120px;
   height: 180px;
@@ -147,6 +146,7 @@ ul {
 .comment-info {
   padding: 5px 10px;
 }
+
 .user-info {
   padding: 5px 10px;
 }
@@ -167,6 +167,22 @@ a.replies {
   cursor: pointer;
 }
 
+.older-price {
+  text-decoration: line-through;
+}
+
+.sale {
+  color: $red;
+}
+
+.sale-label {
+  font-size: 0.8em;
+}
+
+#message-sale-off-product {
+  font-size: 2em;
+}
+
 #new_shop {
   padding: 20px;
 }
@@ -177,10 +193,20 @@ a.replies {
     padding-top: 5px;
   }
 }
+
 .header-mobile-info {
   border-bottom: 1px solid $gray;
   padding-bottom: 20px;
 }
+
 .specifications {
   padding-top: 35px;
+}
+
+.price {
+  font-size: 2em;
+}
+
+.sale-percent {
+  font-size: 2em;
 }

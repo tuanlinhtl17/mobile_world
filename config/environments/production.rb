@@ -89,4 +89,11 @@ Rails.application.configure do
   # Do not dump schema after migrations.
   config.active_record.dump_schema_after_migration = false
   config.i18n.default_locale = :vi
+
+  config.active_job.queue_adapter = :sidekiq
+  config.active_job.queue_name_prefix = "mobile_world"
+  config.active_job.queue_name_delimiter = "_"
+
+  config.serve_static_assets = false
+  config.assets.digest = true
 end

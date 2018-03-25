@@ -39,10 +39,30 @@
               </div>
               <div class="clearfix"></div>
             </div>
-            
-            <h5 class="item_price"><span id="mobile-price-<%= @mobile.id %>">
-              <%= number_with_delimiter @mobile.price, delimiter: "," %></span>&nbspVND</span>
-            </h5>
+
+            <% if @mobile.percent_sale_off %>
+              <span class="item_price price">
+                <span class="sale-label"><%= t "views.mobiles.show.older_price" %></span>
+                <span class="older-price sale">
+                  <%= number_with_delimiter @mobile.older_price, delimiter: "," %></span>&nbspVND</span>
+                </span>
+                <span class="sale sale-percent">&nbsp&nbsp<%= @mobile.percent_sale_off %></span>
+              </span>
+              <br></br>
+            <% end %>
+            <span class="item_price price">
+              <span class="sale-label"><%= t("views.mobiles.show.newer_price") if @mobile.percent_sale_off %></span>
+              <span id="mobile-price-<%= @mobile.id %>" class="sale">
+                <%= number_with_delimiter @mobile.price, delimiter: "," %>
+              </span>VND
+            </span>
+            <% if @mobile.percent_sale_off %>
+              <p>
+                <b><%= t "views.mobiles.show.remaining" %></b>
+                <span class="sale" id="message-sale-off-product"></span>
+              </p>
+            <% end %>
+            <br></br><hr></hr>
             <p><%= @mobile.description %></p>
             <div class="available">
               <ul>
@@ -72,7 +92,7 @@
                     <%= f.label t("views.mobiles.show.district")  %><br/>
                     <%= f.grouped_collection_select :district_id, City.order(:name), :districts, :name, :id, :name, {include_blank: true}, {class: "form-control"} %><br/>
                     <%= f.submit t("views.mobiles.show.check"), class: "btn btn-primary form-control" %>
-                  <% end %>  
+                  <% end %>
                 </div>
                 <ul class="col col-4 show-check-mobile"></ul>
             </section>

@@ -18,22 +18,7 @@
     <div class="product-top">
       <div class="product-one">
         <% if @mobiles.present? %>
-          <% @mobiles.each do |mobile| %>
-            <div class="col-md-3 product-left">
-              <div class="product-main simpleCart_shelfItem">
-                <%= link_to image_tag(mobile.avatar.url(:thumb), class: "img-responsive zoom-img"),
-                    mobile, class: "mask" %>
-                <div class="product-bottom">
-                  <h3><%= mobile.name %></h3>
-                  <p>Explore Now</p>
-                  <h4><a class="item_add" href="#"><i></i></a> <span class=" item_price"><%= mobile.price %>đ</span></h4>
-                </div>
-                <div class="srch">
-                  <span>-50%</span>
-                </div>
-              </div>
-            </div>
-          <% end %>
+          <%= render partial: "shared/mobile", collection: @mobiles %>
         <% end %>
         <div class="clearfix"></div>
       </div>

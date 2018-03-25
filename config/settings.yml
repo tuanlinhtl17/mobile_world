@@ -36,6 +36,8 @@ mobiles:
     name: "iPhone 8 Plus 256GB"
     ram: "2GB"
     price: 1000000
+    older_price: 1500000
+    sale_time: <%= DateTime.new 2018, 6, 22, 8 %>
     width: "78.1 mm"
     height: "158.4 mm"
     front_camera: "12 MP"
@@ -51,6 +53,8 @@ mobiles:
     name: "iPhone Galaxy S8"
     ram: "2GB"
     price: 2000000
+    older_price: 2500000
+    sale_time: <%= DateTime.new 2018, 6, 22, 10 %>
     width: "78.1 mm"
     height: "158.4 mm"
     front_camera: "12 MP"
@@ -66,6 +70,8 @@ mobiles:
     name: "iPhone 6 Plus 256GB"
     ram: "3GB"
     price: 3400000
+    older_price: 3500000
+    sale_time: <%= DateTime.new 2018, 6, 22, 9 %>
     width: "78.1 mm"
     height: "158.4 mm"
     front_camera: "12 MP"
@@ -81,6 +87,8 @@ mobiles:
     name: "iPhone 7 Plus 256GB"
     ram: "2GB"
     price: 8000000
+    older_price: 1000000
+    sale_time: <%= DateTime.new 2018, 6, 22, 8 %>
     width: "78.1 mm"
     height: "158.4 mm"
     front_camera: "12 MP"
@@ -96,6 +104,8 @@ mobiles:
     name: "iPhone 4 Plus"
     ram: "2GB"
     price: 4000000
+    older_price: 8500000
+    sale_time: <%= DateTime.new 2018, 6, 22, 8 %>
     width: "78.1 mm"
     height: "158.4 mm"
     front_camera: "12 MP"
@@ -111,6 +121,8 @@ mobiles:
     name: "Oppo Neo 3"
     ram: "3GB"
     price: 5500000
+    older_price: 7500000
+    sale_time: <%= DateTime.new 2018, 6, 22, 8 %>
     width: "78.1 mm"
     height: "158.4 mm"
     front_camera: "12 MP"
@@ -126,6 +138,8 @@ mobiles:
     name: "Oppo Neo 4"
     ram: "2GB"
     price: 8000000
+    older_price: 9500000
+    sale_time: <%= DateTime.new 2018, 6, 22, 8 %>
     width: "78.1 mm"
     height: "158.4 mm"
     front_camera: "12 MP"
@@ -141,6 +155,8 @@ mobiles:
     name: "Oppo Neo 5"
     ram: "3GB"
     price: 800000
+    older_price: 10000000
+    sale_time: DateTime.new 2018, 6, 22, 8 %>
     width: "78.1 mm"
     height: "158.4 mm"
     front_camera: "12 MP"
@@ -156,6 +172,8 @@ mobiles:
     name: "Oppo Neo 6"
     ram: "4GB"
     price: 1300000
+    older_price: 1500000
+    sale_time: <%= DateTime.new 2018, 6, 22, 8 %>
     width: "78.1 mm"
     height: "158.4 mm"
     front_camera: "12 MP"
@@ -171,6 +189,8 @@ mobiles:
     name: "Oppo Neo 7"
     ram: "4GB"
     price: 1400000
+    older_price: 1500000
+    sale_time: <%= DateTime.new 2018, 6, 22, 8 %>
     width: "78.1 mm"
     height: "158.4 mm"
     front_camera: "12 MP"

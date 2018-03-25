@@ -1,0 +1,8 @@
+---
+:concurrency: 5
+:queues:
+  - default
+  - mailers
+
+  - mobile_world_default
+  - mobile_world_mailers
