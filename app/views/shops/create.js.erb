@@ -1,0 +1,8 @@
+$('.show-check-mobile').html("");
+<% if @shop_mobiles.present? %>
+  <% @shop_mobiles.each do |shop_mobile| %>
+    $('.show-check-mobile').append("<ul><%= j render partial: 'shop_mobile', collection: shop_mobile %></ul>");
+  <% end %>
+<% else %>
+  alert(I18n.t("views.shops.create.error_check"));
+<% end %>

@@ -12,27 +12,13 @@
 <!--start-single-->
 <div class="single contact">
   <div class="container">
-    <div class="single-main">
+    <div class="single-main header-mobile-info">
       <div class="col-md-9 single-main-left">
       <div class="sngl-top">
         <div class="col-md-5 single-top-left">
           <div class="flexslider">
               <ul class="slides">
-              <li data-thumb="<%= asset_path 's-1.jpg' %>">
-                <div class="thumb-image">
-                  <%= image_tag "s-1.jpg", class: "img-responsive", 'data-imagezoom': "true" %>
-                </div>
-              </li>
-              <li data-thumb="<%= asset_path 's-2.jpg' %>">
-                <div class="thumb-image">
-                  <%= image_tag "s-2.jpg", class: "img-responsive", 'data-imagezoom': "true" %>
-                </div>
-              </li>
-              <li data-thumb="<%= asset_path 's-3.jpg' %>">
-                <div class="thumb-image">
-                  <%= image_tag "s-3.jpg", class: "img-responsive", 'data-imagezoom': "true" %>
-                </div>
-              </li>
+                <%= render partial: "slide", collection: @mobile.images %>
               </ul>
           </div>
           <!-- FlexSlider -->
@@ -42,73 +28,84 @@
           <h2><%= @mobile.name %></h2>
             <div class="star-on">
               <ul class="star-footer">
-                  <li><a href="#"><i> </i></a></li>
-                  <li><a href="#"><i> </i></a></li>
-                  <li><a href="#"><i> </i></a></li>
-                  <li><a href="#"><i> </i></a></li>
-                  <li><a href="#"><i> </i></a></li>
-                </ul>
+                <li><a href="#"><i> </i></a></li>
+                <li><a href="#"><i> </i></a></li>
+                <li><a href="#"><i> </i></a></li>
+                <li><a href="#"><i> </i></a></li>
+                <li><a href="#"><i> </i></a></li>
+              </ul>
               <div class="review">
                 <a href="#"> 1 customer review </a>
-
               </div>
-            <div class="clearfix"> </div>
+              <div class="clearfix"></div>
             </div>
-
+            
             <h5 class="item_price"><span id="mobile-price-<%= @mobile.id %>">
               <%= number_with_delimiter @mobile.price, delimiter: "," %></span>&nbspVND</span>
             </h5>
             <p><%= @mobile.description %></p>
             <div class="available">
               <ul>
-                <li><%= t "views.carts.index.color" %>
+                <li><label><%= t "views.carts.index.color" %></label>
                   <%= select_tag "show-color", options_from_collection_for_select(@mobile.colors, "id", "color", "0"), {class: "form-control"} %>
                 </li>
               <div class="clearfix"> </div>
             </ul>
           </div>
-            <input id=<%= @mobile.id %> class="quantity order-quantity-<%= @mobile.id %>" type="number" min="1" style="width: 150px" value="1"></span>
-              <a class="add-cart item_add"  id="<%= @mobile.id %>" onclick= "add_to_cart(this)"><%= t "views.mobiles.show.add_to_cart" %></a>
+            <label><%= t "views.mobiles.show.quantity" %></label>
+            <input id=<%= @mobile.id %> class="quantity order-quantity-<%= @mobile.id %> form-control" type="number" min="1" style="width: 150px" value="1"></span>
+            <a class="add-cart item_add"  id="<%= @mobile.id %>" onclick= "add_to_cart(this)"><%= t "views.mobiles.show.add_to_cart" %></a>
           </div>
         </div>
         <div class="clearfix"> </div>
       </div>
-      <div class="tabs">
-        <ul class="menu_drop">
-          <li class="item1"><a href="#"><%= image_tag "arrow.png" %>Description</a>
-            <ul>
-              <li class="subitem1"><a href="#">Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat.</a></li>
-              <li class="subitem2"><a href="#"> Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat, vel illum dolore eu feugiat nulla facilisis at vero eros et accumsan et iusto odio dignissim qui blandit praesent luptatum zzril delenit augue duis dolore</a></li>
-              <li class="subitem3"><a href="#">Mirum est notare quam littera gothica, quam nunc putamus parum claram, anteposuerit litterarum formas humanitatis per seacula quarta decima et quinta decima. Eodem modo typi, qui nunc nobis videntur parum clari, fiant sollemnes </a></li>
-            </ul>
-          </li>
-          <li class="item2"><a href="#"><%= image_tag "arrow.png" %>Additional information</a>
-            <ul>
-                <li class="subitem2"><a href="#"> Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat, vel illum dolore eu feugiat nulla facilisis at vero eros et accumsan et iusto odio dignissim qui blandit praesent luptatum zzril delenit augue duis dolore</a></li>
-              <li class="subitem3"><a href="#">Mirum est notare quam littera gothica, quam nunc putamus parum claram, anteposuerit litterarum formas humanitatis per seacula quarta decima et quinta decima. Eodem modo typi, qui nunc nobis videntur parum clari, fiant sollemnes </a></li>
-            </ul>
-          </li>
-          <li class="item3"><a href="#"><%= image_tag "arrow.png" %>Reviews (10)</a>
-            <ul>
-              <li class="subitem1"><a href="#">Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat.</a></li>
-              <li class="subitem2"><a href="#"> Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat, vel illum dolore eu feugiat nulla facilisis at vero eros et accumsan et iusto odio dignissim qui blandit praesent luptatum zzril delenit augue duis dolore</a></li>
-              <li class="subitem3"><a href="#">Mirum est notare quam littera gothica, quam nunc putamus parum claram, anteposuerit litterarum formas humanitatis per seacula quarta decima et quinta decima. Eodem modo typi, qui nunc nobis videntur parum clari, fiant sollemnes </a></li>
-            </ul>
-          </li>
-          <li class="item4"><a href="#"><%= image_tag "arrow.png" %>Helpful Links</a>
-            <ul>
-                <li class="subitem2"><a href="#"> Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat, vel illum dolore eu feugiat nulla facilisis at vero eros et accumsan et iusto odio dignissim qui blandit praesent luptatum zzril delenit augue duis dolore</a></li>
-              <li class="subitem3"><a href="#">Mirum est notare quam littera gothica, quam nunc putamus parum claram, anteposuerit litterarum formas humanitatis per seacula quarta decima et quinta decima. Eodem modo typi, qui nunc nobis videntur parum clari, fiant sollemnes </a></li>
-            </ul>
-          </li>
-          <li class="item5"><a href="#"><%= image_tag "arrow.png" %>Make A Gift</a>
-            <ul>
-              <li class="subitem1"><a href="#">Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat.</a></li>
-              <li class="subitem2"><a href="#"> Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat, vel illum dolore eu feugiat nulla facilisis at vero eros et accumsan et iusto odio dignissim qui blandit praesent luptatum zzril delenit augue duis dolore</a></li>
-              <li class="subitem3"><a href="#">Mirum est notare quam littera gothica, quam nunc putamus parum claram, anteposuerit litterarum formas humanitatis per seacula quarta decima et quinta decima. Eodem modo typi, qui nunc nobis videntur parum clari, fiant sollemnes </a></li>
-            </ul>
-          </li>
-        </ul>
+    </div>
+    <div class="col-md-3 single-right">
+          <div class="w_sidebar">
+            <section  class="sky-form">
+              <h4><%= t"views.mobiles.show.check_exit_mobile" %></h4>
+                <div class="col col-4">
+                  <%= form_for @shop, remote: true do |f| %>
+                    <%= f.hidden_field :mobile_id, value: @mobile.id %>
+                    <%= f.label t("views.mobiles.show.city") %><br/>
+                    <%= f.collection_select :city_id, City.order(:name), :id, :name, {include_blank: true},{class: "form-control"} %><br/>
+                    <%= f.label t("views.mobiles.show.district")  %><br/>
+                    <%= f.grouped_collection_select :district_id, City.order(:name), :districts, :name, :id, :name, {include_blank: true}, {class: "form-control"} %><br/>
+                    <%= f.submit t("views.mobiles.show.check"), class: "btn btn-primary form-control" %>
+                  <% end %>  
+                </div>
+                <ul class="col col-4 show-check-mobile"></ul>
+            </section>
+            <section  class="sky-form">
+              <h4>Brand</h4>
+              <div class="row1 row2 scroll-pane">
+                <div class="col col-4">
+                  <label class="checkbox"><input type="checkbox" name="checkbox" checked=""><i></i>kurtas</label>
+                </div>
+                <div class="col col-4">
+                  <label class="checkbox"><input type="checkbox" name="checkbox"><i></i>Sonata</label>
+                  <label class="checkbox"><input type="checkbox" name="checkbox"><i></i>Titan</label>
+                  <label class="checkbox"><input type="checkbox" name="checkbox"><i></i>Casio</label>
+                  <label class="checkbox"><input type="checkbox" name="checkbox"><i></i>Omax</label>
+                  <label class="checkbox"><input type="checkbox" name="checkbox" ><i></i>shree</label>
+                  <label class="checkbox"><input type="checkbox" name="checkbox"><i></i>Fastrack</label>
+                  <label class="checkbox"><input type="checkbox" name="checkbox"><i></i>Sports</label>
+                  <label class="checkbox"><input type="checkbox" name="checkbox"><i></i>Fossil</label>
+                  <label class="checkbox"><input type="checkbox" name="checkbox"><i></i>Maxima</label>
+                  <label class="checkbox"><input type="checkbox" name="checkbox"><i></i>Yepme</label>
+                  <label class="checkbox"><input type="checkbox" name="checkbox"><i></i>Citizen</label>
+                  <label class="checkbox"><input type="checkbox" name="checkbox"><i></i>Diesel</label>
+                </div>
+              </div>
+            </section>
+          </div>
+        </div>
+    <div class="clearfix"> </div>
+  </div>
+    <div class="single-main">
+      <div class="col-md-9 single-main-left">
+        <div class="tabs">
+        <%= raw @mobile.review %>
         <div class="comment-session">
           <h1><%= t "views.mobiles.show.comment" %></h1>
           <%= render "comment_form" %>
@@ -122,7 +119,41 @@
           </div>
         </div>
       </div>
-      <div class="latestproducts">
+      </div>
+      <div class="col-md-3 single-right specifications">
+        <div id="tabs">
+          <h3><%= t "views.mobiles.show.specifications" %></h3>
+          <table class="table">
+            <tr>
+              <td><%= t "views.mobiles.show.resolution" %></td>
+              <td><%= @mobile.resolution %>&nbspPixels</td>
+            </tr>
+            <tr>
+              <td><%= t "views.mobiles.show.size" %></td>
+              <td><%= t "views.mobiles.show.height" %>:&nbsp<%= @mobile.height %>mm -
+              <%= t "views.mobiles.show.weight" %>:&nbsp<%= @mobile.width %>mm</td>
+            </tr>
+            <tr>
+              <td><%= t "views.mobiles.show.front_camera" %></td>
+              <td><%= @mobile.front_camera %>&nbspMP</td>
+            </tr>
+            <tr>
+              <td><%= t "views.mobiles.show.behind_camera" %></td>
+              <td><%= @mobile.behind_camera %>&nbspMP</td>
+            </tr>
+            <tr>
+              <td><%= t "views.mobiles.show.ram" %></td>
+              <td><%= @mobile.ram %></td>
+            </tr>
+            <tr>
+              <td><%= t "views.mobiles.show.battery" %></td>
+              <td><%= @mobile.battery %>&nbspmAh</td>
+            </tr>
+          </table>
+        </div>
+      </div>
+    </div>
+    <div class="latestproducts">
         <div class="product-one">
           <div class="col-md-4 product-left p-left">
             <div class="product-main simpleCart_shelfItem">
@@ -173,89 +204,6 @@
           <div class="clearfix"></div>
         </div>
       </div>
-    </div>
-      <div class="col-md-3 single-right">
-        <div class="w_sidebar">
-          <section  class="sky-form">
-            <h4>Catogories</h4>
-            <div class="row1 scroll-pane">
-              <div class="col col-4">
-                <label class="checkbox"><input type="checkbox" name="checkbox" checked=""><i></i>All Accessories</label>
-              </div>
-              <div class="col col-4">
-                <label class="checkbox"><input type="checkbox" name="checkbox"><i></i>Women Watches</label>
-                <label class="checkbox"><input type="checkbox" name="checkbox"><i></i>Kids Watches</label>
-                <label class="checkbox"><input type="checkbox" name="checkbox"><i></i>Men Watches</label>
-              </div>
-            </div>
-          </section>
-          <section  class="sky-form">
-            <h4>Brand</h4>
-            <div class="row1 row2 scroll-pane">
-              <div class="col col-4">
-                <label class="checkbox"><input type="checkbox" name="checkbox" checked=""><i></i>kurtas</label>
-              </div>
-              <div class="col col-4">
-                <label class="checkbox"><input type="checkbox" name="checkbox"><i></i>Sonata</label>
-                <label class="checkbox"><input type="checkbox" name="checkbox"><i></i>Titan</label>
-                <label class="checkbox"><input type="checkbox" name="checkbox"><i></i>Casio</label>
-                <label class="checkbox"><input type="checkbox" name="checkbox"><i></i>Omax</label>
-                <label class="checkbox"><input type="checkbox" name="checkbox" ><i></i>shree</label>
-                <label class="checkbox"><input type="checkbox" name="checkbox"><i></i>Fastrack</label>
-                <label class="checkbox"><input type="checkbox" name="checkbox"><i></i>Sports</label>
-                <label class="checkbox"><input type="checkbox" name="checkbox"><i></i>Fossil</label>
-                <label class="checkbox"><input type="checkbox" name="checkbox"><i></i>Maxima</label>
-                <label class="checkbox"><input type="checkbox" name="checkbox"><i></i>Yepme</label>
-                <label class="checkbox"><input type="checkbox" name="checkbox"><i></i>Citizen</label>
-                <label class="checkbox"><input type="checkbox" name="checkbox"><i></i>Diesel</label>
-              </div>
-            </div>
-          </section>
-          <section class="sky-form">
-            <h4>Colour</h4>
-              <ul class="w_nav2">
-                <li><a class="color1" href="#"></a></li>
-                <li><a class="color2" href="#"></a></li>
-                <li><a class="color3" href="#"></a></li>
-                <li><a class="color4" href="#"></a></li>
-                <li><a class="color5" href="#"></a></li>
-                <li><a class="color6" href="#"></a></li>
-                <li><a class="color7" href="#"></a></li>
-                <li><a class="color8" href="#"></a></li>
-                <li><a class="color9" href="#"></a></li>
-                <li><a class="color10" href="#"></a></li>
-                <li><a class="color12" href="#"></a></li>
-                <li><a class="color13" href="#"></a></li>
-                <li><a class="color14" href="#"></a></li>
-                <li><a class="color15" href="#"></a></li>
-                <li><a class="color5" href="#"></a></li>
-                <li><a class="color6" href="#"></a></li>
-                <li><a class="color7" href="#"></a></li>
-                <li><a class="color8" href="#"></a></li>
-                <li><a class="color9" href="#"></a></li>
-                <li><a class="color10" href="#"></a></li>
-              </ul>
-          </section>
-          <section class="sky-form">
-            <h4>discount</h4>
-            <div class="row1 row2 scroll-pane">
-              <div class="col col-4">
-                <label class="radio"><input type="radio" name="radio" checked=""><i></i>60 % and above</label>
-                <label class="radio"><input type="radio" name="radio"><i></i>50 % and above</label>
-                <label class="radio"><input type="radio" name="radio"><i></i>40 % and above</label>
-              </div>
-              <div class="col col-4">
-                <label class="radio"><input type="radio" name="radio"><i></i>30 % and above</label>
-                <label class="radio"><input type="radio" name="radio"><i></i>20 % and above</label>
-                <label class="radio"><input type="radio" name="radio"><i></i>10 % and above</label>
-              </div>
-            </div>
-          </section>
-        </div>
-      </div>
-      <div class="clearfix"> </div>
-    </div>
-  </div>
 </div>
 <div class="form-group well" id="form_nested_comment" >
   <%= form_for @comment, remote: true do |f| %>

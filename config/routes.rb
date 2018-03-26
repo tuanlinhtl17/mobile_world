@@ -9,6 +9,7 @@ Rails.application.routes.draw do
     resources :carts, except: [:show, :new, :edit]
     resources :orders, only: [:new, :create]
     get "/search" => "mobiles#search"
+    resources :shops, only: :create
     post "/comment_children" => "comment_childrens#create"
     patch "/advertisement" => "advertisements#update"
   end

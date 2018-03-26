@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20180323111750) do
+ActiveRecord::Schema.define(version: 20180323123022) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -36,6 +36,12 @@ ActiveRecord::Schema.define(version: 20180323111750) do
     t.index ["rater_id"], name: "index_average_caches_on_rater_id"
   end
 
+  create_table "cities", force: :cascade do |t|
+    t.string "name"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
   create_table "colors", force: :cascade do |t|
     t.string "color"
     t.datetime "created_at", null: false
@@ -59,6 +65,14 @@ ActiveRecord::Schema.define(version: 20180323111750) do
     t.bigint "mobile_id"
     t.index ["mobile_id"], name: "index_comments_on_mobile_id"
     t.index ["user_id"], name: "index_comments_on_user_id"
+  end
+
+  create_table "districts", force: :cascade do |t|
+    t.string "name"
+    t.bigint "city_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["city_id"], name: "index_districts_on_city_id"
   end
 
   create_table "images", force: :cascade do |t|
@@ -176,11 +190,13 @@ ActiveRecord::Schema.define(version: 20180323111750) do
   end
 
   create_table "shops", force: :cascade do |t|
-    t.string "city"
-    t.string "district"
     t.string "address"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.bigint "city_id"
+    t.bigint "district_id"
+    t.index ["city_id"], name: "index_shops_on_city_id"
+    t.index ["district_id"], name: "index_shops_on_district_id"
   end
 
   create_table "users", force: :cascade do |t|
@@ -216,6 +232,7 @@ ActiveRecord::Schema.define(version: 20180323111750) do
   add_foreign_key "advertisements", "makers"
   add_foreign_key "comments", "mobiles"
   add_foreign_key "comments", "users"
+  add_foreign_key "districts", "cities"
   add_foreign_key "images", "mobiles"
   add_foreign_key "mobile_colors", "colors"
   add_foreign_key "mobile_colors", "mobiles"
@@ -226,4 +243,6 @@ ActiveRecord::Schema.define(version: 20180323111750) do
   add_foreign_key "orders", "users"
   add_foreign_key "shop_mobiles", "mobiles"
   add_foreign_key "shop_mobiles", "shops"
+  add_foreign_key "shops", "cities"
+  add_foreign_key "shops", "districts"
 end
