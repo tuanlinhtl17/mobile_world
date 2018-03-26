@@ -13,4 +13,8 @@ module ApplicationHelper
       image_tag gravatar_url, alt: user.email, class: "gravatar"
     end
   end
+  
+  def find_color_order_detail color_id
+    Color.find_by(id: color_id).color
+  end
 end

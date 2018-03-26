@@ -35,11 +35,9 @@ gem "ckeditor"
 gem "closure_tree"
 gem "jquery-infinite-pages"
 gem "gon"
-gem "sidekiq", "5.0.0"
-gem "redis", "3.3.3"
-gem "redis-namespace", "1.5.3"
 gem "daemons", "~> 1.2", ">= 1.2.5"
 gem "whenever", require: false
+gem "delayed_job_active_record"
 
 group :development, :test do
   gem "byebug", platforms: [:mri, :mingw, :x64_mingw]

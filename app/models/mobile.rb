@@ -1,6 +1,6 @@
 class Mobile < ApplicationRecord
-  has_many :order_details
-  has_many :shop_mobiles
+  has_many :order_details, dependent: :destroy
+  has_many :shop_mobiles, dependent: :destroy
   has_many :shops, through: :shop_mobiles
   has_many :comments, dependent: :destroy
   belongs_to :maker

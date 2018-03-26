@@ -1,0 +1,5 @@
+<%= t "views.order_mailer.order_successful.hi" %> <%= @order.name %>
+<%= t "views.order_mailer.order_successful.order_success" %>. 
+<%= t "views.order_mailer.order_successful.go_to" %>
+<%= link_to t("layouts.header.mobile_world"), ENV["MAILER_HOST"] %> 
+<%= t "views.order_mailer.order_successful.get_more_mobile" %>

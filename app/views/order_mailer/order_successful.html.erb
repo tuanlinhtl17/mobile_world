@@ -1,0 +1,21 @@
+<h3><%= t "views.order_mailer.order_successful.hi" %> <%= @order.name %></h3>
+<h4><%= t "views.order_mailer.order_successful.order_details" %></h4>
+<table>
+  <tr>
+    <th><%= t "views.carts.index.product_name" %></th>
+    <th><%= t "views.carts.index.quantity" %></th>
+    <th><%= t "views.carts.index.color" %></th>
+    <th><%= t "views.carts.index.unit_price" %></th>
+  </tr>
+  <%= render partial: "order_detail", collection: @order.order_details %>
+  <tr>
+    <td colspan= "3"><b><%= t "views.carts.index.total_price" %></b></td>
+    <td><b><%= number_with_delimiter @order.total_money, delimiter: ","%> đ<b></td>
+  </tr>
+</table>
+<p>
+  <%= t "views.order_mailer.order_successful.order_success" %>. 
+  <%= t "views.order_mailer.order_successful.go_to" %>
+  <%= link_to t("layouts.header.mobile_world"), ENV["MAILER_HOST"] %> 
+  <%= t "views.order_mailer.order_successful.get_more_mobile" %>
+</p>
