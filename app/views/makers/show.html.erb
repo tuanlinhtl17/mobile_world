@@ -1,0 +1,55 @@
+<div class="bnr" id="home">
+  <div  id="top" class="callbacks_container">
+    <ul class="rslides" id="slider4">
+      <% @advertisements.each do |ads| %>
+        <li>
+          <%= image_tag ads.image %>
+        </li>
+      <% end %>
+    </ul>
+  </div>
+  <div class="clearfix"> </div>
+</div>
+
+<br></br><br></br>
+
+<div class="breadcrumbs">
+  <div class="container">
+    <div class="breadcrumbs-main">
+      <ol class="breadcrumb">
+        <li><%= link_to t("views.header.home"), root_path %></li>
+        <li class="active"><%= @maker.name %></li>
+      </ol>
+    </div>
+  </div>
+</div>
+
+<div class="product">
+  <div class="container">
+    <h4><%= t "views.search.amount", amount: @amount %></h4>
+    <%= paginate(@mobiles, remote: true) if @mobiles.present? %>
+    <div class="product-top">
+      <div class="product-one">
+        <% if @mobiles.present? %>
+          <% @mobiles.each do |mobile| %>
+            <div class="col-md-3 product-left">
+              <div class="product-main simpleCart_shelfItem">
+                <%= link_to image_tag(mobile.avatar.url(:thumb), class: "img-responsive zoom-img"),
+                    mobile, class: "mask" %>
+                <div class="product-bottom">
+                  <h3><%= mobile.name %></h3>
+                  <p><%= t "views.shared.explore_now" %></p>
+                  <h4><a class="item_add" href="#"><i></i></a> <span class=" item_price"><%= number_with_delimiter mobile.price, delimiter: "," %>đ</span></h4>
+                </div>
+                <div class="srch">
+                  <span>-50%</span>
+                </div>
+              </div>
+            </div>
+          <% end %>
+        <% end %>
+        <div class="clearfix"></div>
+      </div>
+    </div>
+  </div>
+</div>

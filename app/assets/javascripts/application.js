@@ -32,3 +32,4 @@
 //= require comment
 //= require jquery.infinite-pages
 //= require comment-form
+//= require advertisement

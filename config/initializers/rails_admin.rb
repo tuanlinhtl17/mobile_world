@@ -41,6 +41,14 @@ RailsAdmin.config do |config|
     visible false
   end
 
+  config.model "Image" do
+    visible false
+  end
+
+  config.model "OrderDetail" do
+    visible false
+  end
+
   config.model Mobile do
     list do
       exclude_fields :review, :order_details, :comments, :mobile_colors, :images,
@@ -89,4 +97,15 @@ RailsAdmin.config do |config|
       exclude_fields :shop_mobiles
     end
   end
+
+  config.model Advertisement do
+    create do
+      exclude_fields :number_of_clicks
+    end
+
+    edit do
+      exclude_fields :number_of_clicks
+    end
+  end
+
 end

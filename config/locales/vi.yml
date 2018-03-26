@@ -85,6 +85,9 @@ vi:
         ago: "trước"
         load_more_comment: "Xem thêm comment"
         reply: "Trả lời"
+    makers:
+      error:
+        not_found: "Không tìm thấy nhà sản xuất này"
   admin:
     actions:
       bulk_delete:
