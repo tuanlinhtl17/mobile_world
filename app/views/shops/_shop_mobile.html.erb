@@ -1,0 +1,8 @@
+<li>
+  <%= shop_mobile.shop.address %>
+  <% if shop_mobile.amount.to_i > 0 %>
+    <i><b><%= t "views.shops.shop_mobile.mobile_exits" %></b></i>
+  <% else %>
+    <i><b><%= t "views.shops.shop_mobile.mobile_not_exits" %></b></i>
+  <% end %>
+</li>

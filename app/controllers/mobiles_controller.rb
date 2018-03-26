@@ -23,6 +23,7 @@ class MobilesController < ApplicationController
   end
 
   def show
+    @shop = Shop.new
     @comments = Comment.search_comments(params[:id], nil).page(params[:page]).per(
       Settings.kaminari.paginate_comment)
     @comment = @mobile.comments.build

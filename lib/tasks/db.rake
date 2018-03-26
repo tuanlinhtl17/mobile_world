@@ -27,7 +27,8 @@ namespace :db do
                     weight: mobile.weight, battery: mobile.battery,
                     resolution_width: mobile.resolution_width,
                     resolution_height: mobile.resolution_height,
-                    maker_id: mobile.maker_id, avatar: open(mobile.avatar)
+                    maker_id: mobile.maker_id, avatar: open(mobile.avatar),
+                    description: mobile.description
     end
 
     Settings.colors.each do |color|
@@ -42,6 +43,11 @@ namespace :db do
     Settings.advertisements.each do |ads|
       Advertisement.create title: ads.title, maker_id: ads.maker_id,
                            image: open(ads.image)
+    end
+    
+    Settings.images.each do |image|
+      Image.create mobile_image: open(image.mobile_image),
+                   mobile_id: image.mobile_id
     end
   end
 end

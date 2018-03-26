@@ -81,6 +81,20 @@ en:
         more_comment: "See More Comment"
         comment_here: "Your comment here!"
         submit: "Submit"
+        check_exit_mobile: "Check exit mobile"
+        check: "Check"
+        city: "City"
+        district: "District"
+        quantity: "Quantity"
+        resolution: "Resolution"
+        size: "Size"
+        height: "Height"
+        weight: "Weight"
+        front_camera: "Front Camera"
+        behind_camera: "Behind Camera"
+        ram: "Ram"
+        battery: "Battery"
+        specifications: "Specifications"
     comments:
       comment:
         ago: "ago"
@@ -89,3 +103,9 @@ en:
     makers:
       error:
         not_found: "Cannot find this maker"
+    shops:
+      shop_mobile:
+        mobile_exits: "Mobile exit"
+        mobile_not_exits: "Mobile not exit"
+      create:
+        error_check: "Can't find shop in your address, please find in another address!"

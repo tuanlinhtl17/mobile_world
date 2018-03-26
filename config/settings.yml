@@ -46,6 +46,7 @@ mobiles:
     resolution_height: 1920
     maker_id: 1
     avatar: <%= Rails.root.join("app/assets/images/seed/mobiles/IP 8/avatar.png") %>
+    description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
   -
     name: "iPhone Galaxy S8"
     ram: "2GB"
@@ -60,6 +61,7 @@ mobiles:
     resolution_height: 1920
     maker_id: 1
     avatar: <%= Rails.root.join("app/assets/images/seed/mobiles/Samsung S8/avatar.png") %>
+    description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
   -
     name: "iPhone 6 Plus 256GB"
     ram: "3GB"
@@ -74,6 +76,7 @@ mobiles:
     resolution_height: 1920
     maker_id: 1
     avatar: <%= Rails.root.join("app/assets/images/seed/mobiles/IP 6 plus/avatar.png") %>
+    description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
   -
     name: "iPhone 7 Plus 256GB"
     ram: "2GB"
@@ -88,6 +91,7 @@ mobiles:
     resolution_height: 1920
     maker_id: 1
     avatar: <%= Rails.root.join("app/assets/images/seed/mobiles/IP7 plus/avatar.png") %>
+    description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
   -
     name: "iPhone 4 Plus"
     ram: "2GB"
@@ -102,6 +106,7 @@ mobiles:
     resolution_height: 1920
     maker_id: 1
     avatar: <%= Rails.root.join("app/assets/images/seed/mobiles/IP 4 plus/avatar.jpg") %>
+    description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
   -
     name: "Oppo Neo 3"
     ram: "3GB"
@@ -116,6 +121,7 @@ mobiles:
     resolution_height: 1920
     maker_id: 2
     avatar: <%= Rails.root.join("app/assets/images/seed/mobiles/Oppo Neo 3/avatar.png") %>
+    description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
   -
     name: "Oppo Neo 4"
     ram: "2GB"
@@ -130,6 +136,7 @@ mobiles:
     resolution_height: 1920
     maker_id: 2
     avatar: <%= Rails.root.join("app/assets/images/seed/mobiles/Oppo Neo 4/avatar.png") %>
+    description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
   -
     name: "Oppo Neo 5"
     ram: "3GB"
@@ -144,6 +151,7 @@ mobiles:
     resolution_height: 1920
     maker_id: 2
     avatar: <%= Rails.root.join("app/assets/images/seed/mobiles/Oppo Neo 5/avatar.png") %>
+    description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
   -
     name: "Oppo Neo 6"
     ram: "4GB"
@@ -158,6 +166,7 @@ mobiles:
     resolution_height: 1920
     maker_id: 2
     avatar: <%= Rails.root.join("app/assets/images/seed/mobiles/Oppo Neo 6/avatar.png") %>
+    description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
   -
     name: "Oppo Neo 7"
     ram: "4GB"
@@ -172,6 +181,7 @@ mobiles:
     resolution_height: 1920
     maker_id: 2
     avatar: <%= Rails.root.join("app/assets/images/seed/mobiles/Oppo Neo 7/avatar.png") %>
+    description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
 colors:
   -
     name: "Trắng"
@@ -261,3 +271,13 @@ advertisements:
     title: "Happy new year 2018"
     maker_id: 1
     image: <%= Rails.root.join("app/assets/images/seed/advertisements/slide5.jpg") %>
+images:
+  -
+    mobile_image: <%= Rails.root.join("app/assets/images/seed/mobiles/IP 8/slider1.jpg") %>
+    mobile_id: 1
+  - 
+    mobile_image: <%= Rails.root.join("app/assets/images/seed/mobiles/IP 8/slider2.jpg") %>
+    mobile_id: 1
+  -
+    mobile_image: <%= Rails.root.join("app/assets/images/seed/mobiles/IP 8/slider3.jpg") %>
+    mobile_id: 1

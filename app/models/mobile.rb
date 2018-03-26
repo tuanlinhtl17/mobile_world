@@ -28,6 +28,10 @@ class Mobile < ApplicationRecord
 
   scope :desc_create_time, -> {order(created_at: :desc)}
 
+  def resolution
+    resolution_width.to_s + "x" + resolution_height.to_s
+  end
+
   class << self
     def search params
       if params[:min].present? && params[:max].present? && params[:query].present?

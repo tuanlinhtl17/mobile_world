@@ -80,6 +80,20 @@ vi:
         more_comment: "Xem thêm"
         comment_here: "Ý kiến của bạn"
         submit: "Gửi"
+        check_exit_mobile: "Kiểm tra còn hàng tại nơi ở của bạn không"
+        check: "Kiểm tra"
+        city: "Thành phố"
+        district: "Quận(huyện)"
+        quantity: "Số lượng"
+        resolution: "Độ phân giải"
+        size: "Kích thước"
+        height: "Dài"
+        weight: "Ngang"
+        front_camera: "Camera trước"
+        behind_camera: "Camera sau"
+        ram: "Ram"
+        battery: "Dung lượng pin"
+        specifications: "Thông số kỹ thuật"
     comments:
       comment:
         ago: "trước"
@@ -88,6 +102,13 @@ vi:
     makers:
       error:
         not_found: "Không tìm thấy nhà sản xuất này"
+    shops:
+      shop_mobile:
+        mobile_exits: "Còn hàng"
+        mobile_not_exits: "Hết hàng"
+      create:
+        error_check: "Không tìm thấy cửa hàng phù hợp với vị trí của bạn, 
+          làm ơn thử lại bằng địa chỉ khác!"
   admin:
     actions:
       bulk_delete:
