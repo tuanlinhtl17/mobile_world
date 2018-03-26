@@ -34,3 +34,5 @@
 //= require comment-form
 //= require advertisement
 //= require shop
+//= require jquery.countdown.min
+//= require sale_time

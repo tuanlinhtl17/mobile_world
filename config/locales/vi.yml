@@ -94,6 +94,10 @@ vi:
         ram: "Ram"
         battery: "Dung lượng pin"
         specifications: "Thông số kỹ thuật"
+        older_price: "Giá cũ"
+        newer_price: "Giá mới"
+        remaining: "Chương trình giảm giá còn"
+        days: "ngày"
     comments:
       comment:
         ago: "trước"
@@ -107,7 +111,7 @@ vi:
         mobile_exits: "Còn hàng"
         mobile_not_exits: "Hết hàng"
       create:
-        error_check: "Không tìm thấy cửa hàng phù hợp với vị trí của bạn, 
+        error_check: "Không tìm thấy cửa hàng phù hợp với vị trí của bạn,
           làm ơn thử lại bằng địa chỉ khác!"
   admin:
     actions:

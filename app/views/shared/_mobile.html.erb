@@ -12,9 +12,11 @@
           </span>
         </h4>
       </div>
-      <div class="srch">
-        <span class= "mobile-discount-<%= mobile.id %>">-50%</span>
-      </div>
+      <% if mobile.percent_sale_off %>
+        <div class="srch">
+          <span class= "mobile-discount-<%= mobile.id %>"><%= mobile.percent_sale_off %></span>
+        </div>
+      <% end %>
     </div>
   </div>
 </div>

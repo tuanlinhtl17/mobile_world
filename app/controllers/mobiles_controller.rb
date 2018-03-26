@@ -3,8 +3,7 @@ class MobilesController < ApplicationController
   load_and_authorize_resource
 
   def index
-    @mobiles = Mobile.send :search, {min: params[:min], max: params[:max],
-                                     query: params[:search]}
+    @mobiles = SearchForm.new(params).search.page params[:page]
     @amount = @mobiles.size
     respond_to do |format|
       format.html
@@ -27,14 +26,15 @@ class MobilesController < ApplicationController
     @comments = Comment.search_comments(params[:id], nil).page(params[:page]).per(
       Settings.kaminari.paginate_comment)
     @comment = @mobile.comments.build
+    gon.sale_time = @mobile.sale_time.to_s.gsub! '-', '/'
     respond_to do |format|
       format.html
       format.js {render layout: false}
     end
   end
-  
+
   private
-  
+
   def load_mobile
     @mobile = Mobile.find_by id: params[:id]
     return if @mobile

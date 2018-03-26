@@ -32,6 +32,13 @@ class Mobile < ApplicationRecord
     resolution_width.to_s + "x" + resolution_height.to_s
   end
 
+  def percent_sale_off
+    if sale_time && sale_time > Time.now && older_price && older_price > price
+      percent = ((older_price - price) * 100 / older_price).to_i
+      "-#{percent}%"
+    end
+  end
+
   class << self
     def search params
       if params[:min].present? && params[:max].present? && params[:query].present?

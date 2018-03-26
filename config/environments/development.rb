@@ -65,4 +65,8 @@ Rails.application.configure do
     enable_starttls_auto: true
   }
   config.i18n.default_locale = :vi
+
+  config.active_job.queue_adapter = :sidekiq
+  config.active_job.queue_name_prefix = "mobile_world"
+  config.active_job.queue_name_delimiter = "_"
 end

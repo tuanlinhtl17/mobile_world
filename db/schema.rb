@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20180323123022) do
+ActiveRecord::Schema.define(version: 20180325025636) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -116,6 +116,8 @@ ActiveRecord::Schema.define(version: 20180323123022) do
     t.datetime "updated_at", null: false
     t.bigint "maker_id"
     t.string "avatar"
+    t.datetime "sale_time"
+    t.integer "older_price"
     t.index ["maker_id"], name: "index_mobiles_on_maker_id"
   end
 
