@@ -23,7 +23,6 @@
 //= require jquery.flexslider
 //= require popper.min
 //= require header-search
-//= require cart
 //= require orders
 //= require i18n
 //= require i18n.js
@@ -36,3 +35,4 @@
 //= require shop
 //= require jquery.countdown.min
 //= require sale_time
+//= require add_to_cart

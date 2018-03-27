@@ -24,7 +24,7 @@
           <ul class="unit">
             <li><span><%= t "views.carts.index.item" %></span></li>
             <li><span><%= t "views.carts.index.product_name" %></span></li>
-            <li><span><%= t "views.carts.index.quantity" %></span></li>  
+            <li><span><%= t "views.carts.index.quantity" %></span></li>
             <li><span><%= t "views.carts.index.unit_price" %></span></li>
             <div class="clearfix"> </div>
           </ul>
@@ -51,3 +51,5 @@
   <h1 class= "text-center"><%= t "views.carts.index.no_item" %></h1>
   <div class= "text-center"><%= link_to t("views.carts.index.back_home"), root_path, class: "text-center btn btn-primary" %></div>
 <% end %>
+
+<%= javascript_include_tag "cart" %>

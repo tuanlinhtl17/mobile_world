@@ -28,6 +28,13 @@ class Mobile < ApplicationRecord
 
   scope :desc_create_time, -> {order(created_at: :desc)}
 
+  scope :recommend, -> mobile do
+    where.not(id: mobile.id)
+    .search_in_range(mobile.price - Settings.recommend.range,
+                     mobile.price + Settings.recommend.range)
+    .limit(Settings.recommend.limit)
+  end
+
   def resolution
     resolution_width.to_s + "x" + resolution_height.to_s
   end

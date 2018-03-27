@@ -26,6 +26,7 @@ class MobilesController < ApplicationController
     @comments = Comment.search_comments(params[:id], nil).page(params[:page]).per(
       Settings.kaminari.paginate_comment)
     @comment = @mobile.comments.build
+    @recommends = Mobile.recommend @mobile
     gon.sale_time = @mobile.sale_time.to_s.gsub! '-', '/'
     respond_to do |format|
       format.html
