@@ -97,6 +97,37 @@
               </div>
               <ul class="col col-4 show-check-mobile"></ul>
           </section>
+          <hr></hr>
+          <div id="tabs">
+            <h3><%= t "views.mobiles.show.specifications" %></h3>
+            <table class="table">
+              <tr>
+                <td><%= t "views.mobiles.show.resolution" %></td>
+                <td><%= @mobile.resolution %>&nbspPixels</td>
+              </tr>
+              <tr>
+                <td><%= t "views.mobiles.show.size" %></td>
+                <td><%= t "views.mobiles.show.height" %>:&nbsp<%= @mobile.height %>mm -
+                <%= t "views.mobiles.show.weight" %>:&nbsp<%= @mobile.width %>mm</td>
+              </tr>
+              <tr>
+                <td><%= t "views.mobiles.show.front_camera" %></td>
+                <td><%= @mobile.front_camera %>&nbspMP</td>
+              </tr>
+              <tr>
+                <td><%= t "views.mobiles.show.behind_camera" %></td>
+                <td><%= @mobile.behind_camera %>&nbspMP</td>
+              </tr>
+              <tr>
+                <td><%= t "views.mobiles.show.ram" %></td>
+                <td><%= @mobile.ram %></td>
+              </tr>
+              <tr>
+                <td><%= t "views.mobiles.show.battery" %></td>
+                <td><%= @mobile.battery %>&nbspmAh</td>
+              </tr>
+            </table>
+          </div>
         </div>
       </div>
       <div class="clearfix"> </div>
@@ -120,36 +151,6 @@
       </div>
       </div>
       <div class="col-md-3 single-right specifications">
-        <div id="tabs">
-          <h3><%= t "views.mobiles.show.specifications" %></h3>
-          <table class="table">
-            <tr>
-              <td><%= t "views.mobiles.show.resolution" %></td>
-              <td><%= @mobile.resolution %>&nbspPixels</td>
-            </tr>
-            <tr>
-              <td><%= t "views.mobiles.show.size" %></td>
-              <td><%= t "views.mobiles.show.height" %>:&nbsp<%= @mobile.height %>mm -
-              <%= t "views.mobiles.show.weight" %>:&nbsp<%= @mobile.width %>mm</td>
-            </tr>
-            <tr>
-              <td><%= t "views.mobiles.show.front_camera" %></td>
-              <td><%= @mobile.front_camera %>&nbspMP</td>
-            </tr>
-            <tr>
-              <td><%= t "views.mobiles.show.behind_camera" %></td>
-              <td><%= @mobile.behind_camera %>&nbspMP</td>
-            </tr>
-            <tr>
-              <td><%= t "views.mobiles.show.ram" %></td>
-              <td><%= @mobile.ram %></td>
-            </tr>
-            <tr>
-              <td><%= t "views.mobiles.show.battery" %></td>
-              <td><%= @mobile.battery %>&nbspmAh</td>
-            </tr>
-          </table>
-        </div>
         <h3 class="text-center"><%= t "views.mobiles.show.recommend" %></h3>
         <% @recommends.each do |recommend| %>
           <div class="product-one">

@@ -17,19 +17,18 @@
   <body>
     <%= render "layouts/header"%>
     <div class="container">
-      <% if notice %>
-        <div class="alert alert-success text-center"><%= notice %></div>
-      <% elsif alert %>
-        <div class="alert alert-danger text-center"><%= alert %></div>
-      <% else flash %>
+      <% if flash %>
         <% flash.each do |message_type, message| %>
-          <div class="alert alert-<%= message_type %>"><%= message %></div>
+          <div class="alert alert-<%= flash_class message_type %>">
+            <a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a>
+            <strong><%= message %></strong>
+          </div>
         <% end %>
       <% end %>
       <%= yield %>
     </div>
     <%= render "layouts/footer"%>
-    <a id="back-to-top" href="#" class="btn btn-primary btn-lg back-to-top" 
+    <a id="back-to-top" href="#" class="btn btn-primary btn-lg back-to-top"
       role="button" data-toggle="tooltip" data-placement="left">
       <i class="fa fa-angle-double-up fa-1x"></i>
     </a>

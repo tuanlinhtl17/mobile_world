@@ -12,6 +12,7 @@ Rails.application.routes.draw do
     resources :shops, only: :create
     post "/comment_children" => "comment_childrens#create"
     patch "/advertisement" => "advertisements#update"
+    get "/orders/history" => "orders#history"
   end
 
   devise_for :users, controllers: { omniauth_callbacks: "user/omniauth_callbacks",

@@ -5,7 +5,7 @@ class ApplicationController < ActionController::Base
   before_action :set_locale
   before_action :set_cart
   before_action :configure_permitted_parameters, if: :devise_controller?
-  after_action :set_cookies 
+  after_action :set_cookies
 
   rescue_from CanCan::AccessDenied do |exception|
     redirect_to main_app.root_path, alert: exception.message
@@ -51,7 +51,7 @@ class ApplicationController < ActionController::Base
       @cart = []
     end
   end
-  
+
   def set_cookies
     cookies[:current_user] = current_user ? true : false
   end

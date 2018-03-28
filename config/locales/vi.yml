@@ -18,6 +18,8 @@ vi:
     please_login: "Làm ơn đăng nhập để comment"
     load_mobile: "Không tìm thấy mobile với id: "
     load_comment: "Không tìm thấy bình luận"
+    login_history: "Đăng nhập để truy cập trang này"
+    no_color: "Không tìm thấy màu sắc của một vài máy"
   mailers:
     order_mailer:
       order_success: "Đặt hàng thành công"
@@ -36,7 +38,9 @@ vi:
       sign_in: "Đăng nhập"
       sign_up: "Đăng ký"
       sign_out: "Đăng xuất"
-      edit: "Cá nhân"
+      profile: "Cá nhân"
+      edit: "Sửa thông tin cá nhân"
+      history: "Lịch sử đơn hàng"
       profile: "Tài khoản"
       home: "Trang chủ"
       admin: "Trang admin"
@@ -76,6 +80,9 @@ vi:
         your_phone: "Số điện thoại:"
         order_info: "Thông tin sản phẩm"
         item: "nhãn hàng"
+      history:
+        created_at: "Đặt hàng vào "
+        none: "Bạn chưa có đơn đặt hàng nào"
     mobiles:
       show:
         add_to_cart: "Thêm vào giỏ hàng"

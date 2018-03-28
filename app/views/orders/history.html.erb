@@ -1,0 +1,29 @@
+<% if @orders.present? %>
+  <% @orders.each do |order| %>
+    <div class="cart-items">
+      <h4><strong><%= "#{t("views.orders.history.created_at")} #{order.created_at.strftime("%H:%M %d/%m/%Y")}" %></strong></h4>
+      <div class="in-check" >
+        <ul class="unit">
+          <li><span><%= t "views.carts.index.item" %></span></li>
+          <li><span><%= t "views.carts.index.product_name" %></span></li>
+          <li><span><%= t "views.carts.index.quantity" %></span></li>
+          <li><span><%= t "views.carts.index.unit_price" %></span></li>
+          <div class="clearfix"> </div>
+        </ul>
+        <%= render partial: "mobile_history", collection: order.order_details, as: :order_detail %>
+        <ul class="cart-header">
+            <li class="ring-in"></li>
+            <li><span class="name"><%= t "views.carts.index.total_price" %></span></li>
+            <li><span class="cost"></span></li>
+            <li><span></span></li>
+            <li><span class="cost total_price"><%= number_with_delimiter order.total_money %></span></li>
+          <div class="clearfix"></div>
+        </ul>
+        <div class="col-md-9"></div>
+      </div>
+    </div>
+    <hr></hr>
+  <% end %>
+<% else %>
+  <h3><%= t "views.orders.history.none" %></h3>
+<% end %>
