@@ -35,4 +35,4 @@
 //= require shop
 //= require jquery.countdown.min
 //= require sale_time
-//= require add_to_cart
+//= require back-to-top

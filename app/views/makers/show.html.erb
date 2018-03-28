@@ -53,3 +53,6 @@
     </div>
   </div>
 </div>
+<% if @cart.present? %>
+  <%= render partial: "shared/cart", locals: {cart: @cart}%>
+<% end %>

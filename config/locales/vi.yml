@@ -6,6 +6,7 @@ vi:
     check_quantity: "Số lượng không được nhỏ hơn 1"
     delete_item_error: "Lỗi không thể xóa sản phẩm này"
     add_to_cart: "Thêm vào giỏ hàng thành công"
+    failed_add_to_cart: "Không thêm vào được giỏ hàng"
     create_comment_successs: "Bình luận của bạn đã được gửi"
     create_comment_error: "Bình luận của bạn chưa được lưu"
     delete_comment_successs: "Xóa bình luận thành công"

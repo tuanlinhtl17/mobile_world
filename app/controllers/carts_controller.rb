@@ -3,6 +3,9 @@ class CartsController < ApplicationController
   
   def create
     session[:cart] = @new_cart.data
+    respond_to do |format|
+      format.js
+    end
   end
 
   def update
@@ -20,6 +23,6 @@ class CartsController < ApplicationController
   private
   
   def create_new_cart
-    @new_cart = CartForm.new params, @cart
+    @new_cart = CartForm.new params[:cart], @cart
   end
 end
