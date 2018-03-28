@@ -14,7 +14,6 @@
       I18n.locale = "<%= I18n.locale %>";
     </script>
   </head>
-
   <body>
     <%= render "layouts/header"%>
     <div class="container">
@@ -30,5 +29,9 @@
       <%= yield %>
     </div>
     <%= render "layouts/footer"%>
+    <a id="back-to-top" href="#" class="btn btn-primary btn-lg back-to-top" 
+      role="button" data-toggle="tooltip" data-placement="left">
+      <i class="fa fa-angle-double-up fa-1x"></i>
+    </a>
   </body>
 </html>

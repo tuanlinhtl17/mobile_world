@@ -16,6 +16,8 @@ delay_time_send_email:
 recommend:
   range: 500000
   limit: 3
+currency:
+  vnd: "VND"
 users:
   -
     email: normal_user@gmail.com

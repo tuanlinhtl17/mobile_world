@@ -1,9 +1,9 @@
 <ul class="cart-header order-mobile-<%= mobile.id %>">
   <div class="close1" onclick="remove_item(this)" id=<%= mobile.id %>> </div>
     <li class="ring-in">
-      <a href="single.html" >
+      <%= link_to mobile_path(mobile) do %>
         <%= image_tag mobile.avatar, class: "img-responsive" %>
-      </a>
+      <% end %>
     </li>
     <li><span class="name"><%= mobile.name %></span>
       <%= select_tag mobile.id, options_from_collection_for_select(mobile.colors, "id", "color", find_exits_item(@cart, mobile.id.to_s)["color_id"]), {class: "color color-#{mobile.id}"}%>

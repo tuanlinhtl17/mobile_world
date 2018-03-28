@@ -6,6 +6,7 @@ en:
     check_quantity: "Quantity can't less than 1"
     delete_item_error: "Delete error!"
     add_to_cart: "Success add to cart"
+    failed_add_to_cart: "Failed add to cart"
     create_comment_successs: "Your comment was successfully added!"
     create_comment_error: "Failed to add your comment"
     delete_comment_successs: "Your comment was successfully deleted!"

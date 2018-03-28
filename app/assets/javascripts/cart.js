@@ -1,6 +1,6 @@
 $(document).ready(function() {
   load_total_money();
-
+  
   $('li input').on('change', function(){
     load_total_money();
     var quantity = $('.order-quantity-'+ this.id).val();
@@ -10,10 +10,10 @@ $(document).ready(function() {
         method: 'PATCH',
         url: '/carts/'+ this.id,
         dataType: 'JSON',
-        data: {
+        data: {'cart': {
           'mobile_id': this.id,
           'quantity': quantity
-        }
+        }}
       });
     } else {
       alert(I18n.t("flash.check_quantity"));
@@ -26,7 +26,7 @@ $(document).ready(function() {
     $.ajax({
       method: 'DELETE',
       url: '/carts/'+ link.id,
-      data: {mobile_id: link.id}
+      data: {'cart': {'mobile_id': link.id}}
     }).done(function(){
       $('.order-mobile-'+ link.id).fadeOut('slow', function(c){
         $('.order-mobile-'+ link.id).remove();
@@ -43,10 +43,10 @@ $(document).ready(function() {
       method: 'PATCH',
       url: '/carts/'+ this.id,
       dataType: 'JSON',
-      data: {
+      data: {'cart': {
         'mobile_id': this.id,
         'color_id': color
-      }
+      }}
     });
   });
 })

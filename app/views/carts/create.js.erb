@@ -1,0 +1,6 @@
+<% if @cart.present? %>
+  $("#position-cart").html("<%= j render partial: 'shared/cart', locals: {cart: @cart} %>");
+  alert(I18n.t("flash.add_to_cart"));
+<% else %>
+  alert(I18n.t("flash.failed_add_to_cart"));
+<% end %>

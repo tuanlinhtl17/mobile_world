@@ -58,15 +58,5 @@
   </div>
 </div>
 <% if @cart.present? %>
-  <%= link_to carts_path, class: "shopping-cart" do %>
-    <div class="row">
-      <div class="col-md-4">
-        <i class="fa fa-3x fa-shopping-cart" aria-hidden="true"></i>
-      </div>
-      <div class="col-md-8">
-        <strong><%= t "views.mobiles.show.cart_have" %></strong><br/>
-        <strong><%= @cart.count %>&nbsp<%= t "views.orders.new.item" %></strong>
-      </div>
-    </div>
-  <% end %>
+  <%= render partial: "shared/cart", locals: {cart: @cart}%>
 <% end %>
