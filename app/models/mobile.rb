@@ -1,4 +1,5 @@
 class Mobile < ApplicationRecord
+  ratyrate_rateable "quality"
   has_many :order_details, dependent: :destroy
   has_many :shop_mobiles, dependent: :destroy
   has_many :shops, through: :shop_mobiles

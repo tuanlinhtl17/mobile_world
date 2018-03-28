@@ -103,6 +103,8 @@ vi:
         remaining: "Chương trình giảm giá còn"
         days: "ngày"
         recommend: "Sản phẩm tương tự"
+        login_to_rate: "Làm ơn đăng nhập để đánh giá sản phẩm"
+        customer_rating: "khách hàng đánh giá"
     comments:
       comment:
         ago: "trước"

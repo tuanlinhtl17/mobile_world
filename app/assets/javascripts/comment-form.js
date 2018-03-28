@@ -1,20 +1,4 @@
 $(function(){
-  function getCookie(cname) {
-    var name = cname + '=';
-    var decodedCookie = decodeURIComponent(document.cookie);
-    var ca = decodedCookie.split(';');
-    for(var i = 0; i <ca.length; i++) {
-        var c = ca[i];
-        while (c.charAt(0) == ' ') {
-            c = c.substring(1);
-        }
-        if (c.indexOf(name) == 0) {
-            return c.substring(name.length, c.length);
-        }
-    }
-    return '';
-  }
-  
   $('#form_nested_comment').hide();
   nested_comment = function(link, e) {
     e.preventDefault()
@@ -25,11 +9,9 @@ $(function(){
   }
   
   $('.submit-comment').on('click', function(){
-    if(getCookie('current_user') == 'true'){
-      $('.submit-comment-form').removeAttr('disabled')
-    } else {
+    if(getCookie('current_user') == 'false'){
       alert(I18n.t('flash.please_login'))
-      $('.submit-comment-form').attr('disabled', 'disabled')
+      window.location.href = "/users/sign_in";
     }
   })
   

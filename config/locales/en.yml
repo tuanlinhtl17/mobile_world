@@ -104,6 +104,8 @@ en:
         remaining: "Discount program remaining"
         days: "days"
         recommend: "Similar product"
+        login_to_rate: "Please login to rating"
+        customer_rating: "Customer Rating"
     comments:
       comment:
         ago: "ago"
@@ -125,3 +127,4 @@ en:
         get_more_mobile: "to get more mobile"
         hi: "Hi"
         order_details: "Your order details is:"
+        cart_have: "Cart have" 
