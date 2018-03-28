@@ -1,9 +1,10 @@
 class Order < ApplicationRecord
-  has_many :order_details
+  has_many :order_details, dependent: :destroy
   accepts_nested_attributes_for :order_details
   belongs_to :user
   before_save :update_subtotal
   enum status: [:inprogress, :shipping, :done, :cancelled]
+  after_save :order_successful
   validates :phone_number, numericality: {only_integer: true},
     length: {maximum: Settings.phone_number.max_length,
     minimum: Settings.phone_number.min_length}
@@ -19,5 +20,9 @@ class Order < ApplicationRecord
 
   def update_subtotal
     self[:total_money] = subtotal
+  end
+  
+  def order_successful
+    SendEmailJob.set(wait: Settings.delay_time_send_email.time_delay.seconds).perform_later(self.user)
   end
 end

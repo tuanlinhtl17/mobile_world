@@ -17,13 +17,16 @@ vi:
     please_login: "Làm ơn đăng nhập để comment"
     load_mobile: "Không tìm thấy mobile với id: "
     load_comment: "Không tìm thấy bình luận"
+  mailers:
+    order_mailer:
+      order_success: "Đặt hàng thành công"
   layouts:
     header:
       language: "Ngôn ngữ"
       english: "Tiếng Anh"
       vietnamese: "Tiếng Việt"
       card: "Giỏ Hàng"
-      mobile_world: "Thế giới di động"
+      mobile_world: "Mobile World"
       search: "Tìm Kiếm"
   views:
     shared:
@@ -113,6 +116,13 @@ vi:
       create:
         error_check: "Không tìm thấy cửa hàng phù hợp với vị trí của bạn,
           làm ơn thử lại bằng địa chỉ khác!"
+    order_mailer:
+      order_successful:
+        order_success: "Bạn đã đặt hàng thành công thành công"
+        go_to: "Ghé thăm"
+        get_more_mobile: "để mua thêm nhiều sản phẩm thú vị hơn"
+        hi: "Chào"
+        order_details: "Chi tiết đơn hàng của bạn bao gồm:"
   admin:
     actions:
       bulk_delete:

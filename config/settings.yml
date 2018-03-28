@@ -11,6 +11,8 @@ kaminari:
   paginate_comment: 5
 ads:
   max_display: 5
+delay_time_send_email:
+  time_delay: 20
 users:
   -
     email: normal_user@gmail.com

@@ -1,0 +1,6 @@
+<tr>
+  <td><%= order_detail.mobile.name %></td>
+  <td><%= order_detail.quantity %></td>
+  <td><%= find_color_order_detail(order_detail.color_id) %></td>
+  <td><%= number_with_delimiter order_detail.price, delimiter: "," %> đ</td>
+</tr>

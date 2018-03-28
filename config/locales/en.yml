@@ -17,6 +17,9 @@ en:
     please_login: "please_login"
     load_mobile: "Can't find mobile withd id: "
     load_comment: "Can't find comment"
+  mailers:
+    order_mailer:
+      order_success: "Order Successful"
   layouts:
     header:
       language: "Language"
@@ -113,3 +116,10 @@ en:
         mobile_not_exits: "Mobile not exit"
       create:
         error_check: "Can't find shop in your address, please find in another address!"
+    order_mailer:
+      order_successful:
+        order_success: "Your order is successfully"
+        go_to: "Go to"
+        get_more_mobile: "to get more mobile"
+        hi: "Hi"
+        order_details: "Your order details is:"
