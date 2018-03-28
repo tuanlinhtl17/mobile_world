@@ -101,6 +101,7 @@ vi:
         newer_price: "Giá mới"
         remaining: "Chương trình giảm giá còn"
         days: "ngày"
+        recommend: "Sản phẩm tương tự"
     comments:
       comment:
         ago: "trước"

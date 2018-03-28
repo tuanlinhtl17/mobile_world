@@ -13,6 +13,9 @@ ads:
   max_display: 5
 delay_time_send_email:
   time_delay: 20
+recommend:
+  range: 500000
+  limit: 3
 users:
   -
     email: normal_user@gmail.com
@@ -297,7 +300,7 @@ images:
   -
     mobile_image: <%= Rails.root.join("app/assets/images/seed/mobiles/IP 8/slider1.jpg") %>
     mobile_id: 1
-  - 
+  -
     mobile_image: <%= Rails.root.join("app/assets/images/seed/mobiles/IP 8/slider2.jpg") %>
     mobile_id: 1
   -
