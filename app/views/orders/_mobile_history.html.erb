@@ -1,0 +1,16 @@
+<ul class="cart-header order-mobile-<%= order_detail.mobile.id %>">
+  <li class="ring-in">
+    <%= link_to mobile_path(order_detail.mobile) do %>
+      <%= image_tag order_detail.mobile.avatar, class: "img-responsive" %>
+    <% end %>
+  </li>
+  <li>
+    <span class="name"><%= order_detail.mobile.name %></span>
+    <h4><%="#{t("views.carts.index.color")}: #{find_color_order_detail(order_detail.color_id)} "%></h4>
+  </li>
+  <li><span class="cost">
+    <%= order_detail.quantity %>
+  </li>
+  <li><span class="cost price"><%= number_with_delimiter order_detail.mobile.price %>&nbspVND</span></li>
+  <div class="clearfix"> </div>
+</ul>

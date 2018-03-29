@@ -1,7 +1,7 @@
 class OrdersController < ApplicationController
-  before_action :check_cart
+  before_action :check_cart, only: [:new, :create]
   before_action :authenticate_user!
-  
+
   def new
     @order = current_user.orders.new
     @order.order_details.new
@@ -21,15 +21,24 @@ class OrdersController < ApplicationController
       redirect_to new_order_path
     end
   end
-  
+
+  def history
+    if user_signed_in?
+      @orders = current_user.orders.includes(:order_details)
+    elsif user_signed_in?
+      flash[:danger] = t "flash.login_history"
+      redirect_to root_path
+    end
+  end
+
   private
-  
+
   def check_cart
-    return if @cart.present?  
+    return if @cart.present?
     redirect_to root_path
     flash[:danger] = t "flash.cart_nil"
   end
-  
+
   def order_params
     params.require(:order).permit :name, :address, :phone_number
   end

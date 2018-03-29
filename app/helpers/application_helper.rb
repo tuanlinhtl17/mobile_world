@@ -2,7 +2,7 @@ module ApplicationHelper
   def makers
     @makers = Maker.all
   end
-  
+
   def avatar_for user, options = {size: 80}
     if user.image?
       image_tag user.image.url
@@ -13,8 +13,20 @@ module ApplicationHelper
       image_tag gravatar_url, alt: user.email, class: "gravatar"
     end
   end
-  
+
   def find_color_order_detail color_id
-    Color.find_by(id: color_id).color
+    color = Color.find_by(id: color_id).color
+    if color.nil?
+      flash[:danger] = t "flash.no_color"
+    end
+  end
+
+  def flash_class level
+    case level
+    when "notice" then "info"
+    when "success" then "success"
+    when "error" then "danger"
+    when "alert" then "danger"
+    end
   end
 end

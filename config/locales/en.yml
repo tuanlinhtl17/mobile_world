@@ -18,6 +18,8 @@ en:
     please_login: "please_login"
     load_mobile: "Can't find mobile withd id: "
     load_comment: "Can't find comment"
+    login_history: "Please login to access this page."
+    no_color: "Can not find the color of some mobiles"
   mailers:
     order_mailer:
       order_success: "Order Successful"
@@ -77,6 +79,9 @@ en:
         your_phone: "Your Phone Number"
         order_info: "Order Infomation"
         item: "items"
+      history:
+        created_at: "Ordered at "
+        none: "You have no orders"
     mobiles:
       show:
         add_to_cart: "ADD TO CART"

@@ -1,6 +1,6 @@
 $(document).ready(function() {
   load_total_money();
-  
+
   $('li input').on('change', function(){
     load_total_money();
     var quantity = $('.order-quantity-'+ this.id).val();
@@ -20,7 +20,6 @@ $(document).ready(function() {
       $('.next_order').attr('disabled', true);
     }
   });
-
 
   remove_item = function(link) {
     $.ajax({

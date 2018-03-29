@@ -21,7 +21,7 @@ class Order < ApplicationRecord
   def update_subtotal
     self[:total_money] = subtotal
   end
-  
+
   def order_successful
     SendEmailJob.set(wait: Settings.delay_time_send_email.time_delay.seconds).perform_later(self.user)
   end
