@@ -14,34 +14,19 @@
 
 <div class="about">
   <div class="container">
+    <h3><%= t("views.home.hot_mobile") if @hot_mobiles.present? %></h3>
     <div class="about-top grid-1">
-      <div class="col-md-4 about-left">
-        <figure class="effect-bubba">
-          <%= image_tag "abt-1.jpg", class: "img-responsive" %>
-          <figcaption>
-            <h2>Nulla maximus nunc</h2>
-            <p>In sit amet sapien eros Integer dolore magna aliqua</p>
-          </figcaption>
-        </figure>
-      </div>
-      <div class="col-md-4 about-left">
-        <figure class="effect-bubba">
-          <%= image_tag "abt-2.jpg", class: "img-responsive" %>
-          <figcaption>
-            <h4>Mauris erat augue</h4>
-            <p>In sit amet sapien eros Integer dolore magna aliqua</p>
-          </figcaption>
-        </figure>
-      </div>
-      <div class="col-md-4 about-left">
-        <figure class="effect-bubba">
-          <%= image_tag "abt-3.jpg", class: "img-responsive" %>
-          <figcaption>
-            <h4>Cras elit mauris</h4>
-            <p>In sit amet sapien eros Integer dolore magna aliqua</p>
-          </figcaption>
-        </figure>
-      </div>
+      <% @hot_mobiles.each do |hot_mobile| %>
+        <div class="col-md-4 about-left">
+          <figure class="effect-bubba">
+            <%= image_tag hot_mobile.hot_mobile, class: "img-responsive" %>
+            <figcaption>
+              <h2><%= hot_mobile.name %></h2>
+              <p><%= hot_mobile.description[0..40] %></p>
+            </figcaption>
+          </figure>
+        </div>
+      <% end %>
       <div class="clearfix"></div>
     </div>
   </div>

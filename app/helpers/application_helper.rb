@@ -29,4 +29,12 @@ module ApplicationHelper
     when "alert" then "danger"
     end
   end
+
+  def google_map address
+    Settings.google_map_url + address.parameterize(separator: "+")
+  end
+
+  def citys
+    City.all
+  end
 end

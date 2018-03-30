@@ -5,8 +5,6 @@ address:
   min_length: 10
 order:
   total_money_nil: 0
-pages:
-  limit_mobile: 8
 kaminari:
   paginate_comment: 5
 ads:
@@ -18,6 +16,12 @@ recommend:
   limit: 3
 currency:
   vnd: "VND"
+google_map_url: "https://www.google.com/maps/place/"
+contact:
+  call_for_buy: 1800.1060
+  call_to_complain: 1800.1062
+  call_for_warranty: 1800.1064
+  technical_assistance: 1800.1763
 users:
   -
     email: normal_user@gmail.com
@@ -55,6 +59,7 @@ mobiles:
     resolution_height: 1920
     maker_id: 1
     avatar: <%= Rails.root.join("app/assets/images/seed/mobiles/IP 8/avatar.png") %>
+    hot_mobile: <%= Rails.root.join("app/assets/images/seed/mobiles/IP 8/hot_mobile.jpg") %>
     description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
   -
     name: "iPhone Galaxy S8"
@@ -72,6 +77,7 @@ mobiles:
     resolution_height: 1920
     maker_id: 1
     avatar: <%= Rails.root.join("app/assets/images/seed/mobiles/Samsung S8/avatar.png") %>
+    hot_mobile: <%= Rails.root.join("app/assets/images/seed/mobiles/Samsung S8/hot_mobile.jpg") %>
     description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
   -
     name: "iPhone 6 Plus 256GB"
@@ -89,6 +95,7 @@ mobiles:
     resolution_height: 1920
     maker_id: 1
     avatar: <%= Rails.root.join("app/assets/images/seed/mobiles/IP 6 plus/avatar.png") %>
+    hot_mobile: <%= Rails.root.join("app/assets/images/seed/mobiles/IP 6 plus/hot_mobile.jpg") %>
     description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
   -
     name: "iPhone 7 Plus 256GB"
@@ -106,6 +113,7 @@ mobiles:
     resolution_height: 1920
     maker_id: 1
     avatar: <%= Rails.root.join("app/assets/images/seed/mobiles/IP7 plus/avatar.png") %>
+    hot_mobile: <%= Rails.root.join("app/assets/images/seed/mobiles/IP7 plus/hot_mobile.jpg") %>
     description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
   -
     name: "iPhone 4 Plus"
@@ -123,6 +131,7 @@ mobiles:
     resolution_height: 1920
     maker_id: 1
     avatar: <%= Rails.root.join("app/assets/images/seed/mobiles/IP 4 plus/avatar.jpg") %>
+    hot_mobile: <%= Rails.root.join("app/assets/images/seed/mobiles/IP 4 plus/hot_mobile.jpg") %>
     description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
   -
     name: "Oppo Neo 3"
@@ -140,6 +149,7 @@ mobiles:
     resolution_height: 1920
     maker_id: 2
     avatar: <%= Rails.root.join("app/assets/images/seed/mobiles/Oppo Neo 3/avatar.png") %>
+    hot_mobile: <%= Rails.root.join("app/assets/images/seed/mobiles/Oppo Neo 3/hot_mobile.jpg") %>
     description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
   -
     name: "Oppo Neo 4"
@@ -157,6 +167,7 @@ mobiles:
     resolution_height: 1920
     maker_id: 2
     avatar: <%= Rails.root.join("app/assets/images/seed/mobiles/Oppo Neo 4/avatar.png") %>
+    hot_mobile: <%= Rails.root.join("app/assets/images/seed/mobiles/Oppo Neo 4/hot_mobile.jpg") %>
     description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
   -
     name: "Oppo Neo 5"
@@ -174,6 +185,7 @@ mobiles:
     resolution_height: 1920
     maker_id: 2
     avatar: <%= Rails.root.join("app/assets/images/seed/mobiles/Oppo Neo 5/avatar.png") %>
+    hot_mobile: <%= Rails.root.join("app/assets/images/seed/mobiles/Oppo Neo 5/hot_mobile.jpg") %>
     description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
   -
     name: "Oppo Neo 6"
@@ -191,6 +203,7 @@ mobiles:
     resolution_height: 1920
     maker_id: 2
     avatar: <%= Rails.root.join("app/assets/images/seed/mobiles/Oppo Neo 6/avatar.png") %>
+    hot_mobile: <%= Rails.root.join("app/assets/images/seed/mobiles/Oppo Neo 6/hot_mobile.jpg") %>
     description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
   -
     name: "Oppo Neo 7"
@@ -208,6 +221,7 @@ mobiles:
     resolution_height: 1920
     maker_id: 2
     avatar: <%= Rails.root.join("app/assets/images/seed/mobiles/Oppo Neo 7/avatar.png") %>
+    hot_mobile: <%= Rails.root.join("app/assets/images/seed/mobiles/Oppo Neo 7/hot_mobile.jpg") %>
     description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
 colors:
   -
@@ -308,3 +322,125 @@ images:
   -
     mobile_image: <%= Rails.root.join("app/assets/images/seed/mobiles/IP 8/slider3.jpg") %>
     mobile_id: 1
+citys:
+  -
+    name: "Hà Nội"
+  -
+    name: "Hồ Chí Minh"
+districts:
+  -
+    name: "Lê Duẩn"
+    city_id: 1
+  -
+    name: "Nguyễn Văn Cừ"
+    city_id: 1
+  -
+    name: "Thái Hà"
+    city_id: 1
+  -
+    name: "Trần Quang Khải"
+    city_id: 2
+  -
+    name: "Đường 3/2"
+    city_id: 2
+  -
+    name: "Cách Mạng Tháng 8"
+    city_id: 2
+shops:
+  -
+    address: "194 Lê Duẩn"
+    district_id: 1
+    city_id: 1
+  -
+    address: "382 Nguyễn Văn Cừ"
+    district_id: 2
+    city_id: 1
+  -
+    address: "122 Thái Hà"
+    district_id: 3
+    city_id: 1
+  -
+    address: "55 Trần Quang Khải"
+    district_id: 4
+    city_id: 2
+  -
+    address: "1142-1144 đường 3/2"
+    district_id: 5
+    city_id: 2
+  -
+    address: "621D Cách Mạng Tháng 8"
+    district_id: 6
+    city_id: 2
+  -
+    address: "621 Lê Duẩn"
+    district_id: 1
+    city_id: 1
+  -
+    address: "621D Trần Quang Khải"
+    district_id: 4
+    city_id: 2
+shop_mobiles:
+  -
+    shop_id: 1
+    mobile_id: 1
+    amount: 20
+  -
+    shop_id: 1
+    mobile_id: 2
+    amount: 20
+  -
+    shop_id: 2
+    mobile_id: 3
+    amount: 20
+  -
+    shop_id: 2
+    mobile_id: 4
+    amount: 20
+  -
+    shop_id: 3
+    mobile_id: 5
+    amount: 20
+  -
+    shop_id: 3
+    mobile_id: 6
+    amount: 20
+  -
+    shop_id: 4
+    mobile_id: 7
+    amount: 20
+  -
+    shop_id: 4
+    mobile_id: 8
+    amount: 20
+  -
+    shop_id: 5
+    mobile_id: 9
+    amount: 20
+  -
+    shop_id: 5
+    mobile_id: 10
+    amount: 20
+  -
+    shop_id: 6
+    mobile_id: 1
+    amount: 20
+  -
+    shop_id: 6
+    mobile_id: 4
+    amount: 20
+  -
+    shop_id: 7
+    mobile_id: 3
+    amount: 20
+  -
+    shop_id: 7
+    mobile_id: 7
+    amount: 20
+  -
+    shop_id: 8
+    mobile_id: 5
+    amount: 20
+  -
+    shop_id: 8
+    mobile_id: 10
+    amount: 20

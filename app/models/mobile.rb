@@ -10,6 +10,7 @@ class Mobile < ApplicationRecord
   has_many :images, dependent: :delete_all
   accepts_nested_attributes_for :images, allow_destroy: true
   mount_uploader :avatar, AvatarUploader
+  mount_uploader :hot_mobile, HotMobileUploader
 
   include PgSearch
   pg_search_scope :search_by_query,
@@ -34,6 +35,11 @@ class Mobile < ApplicationRecord
     .search_in_range(mobile.price - Settings.recommend.range,
                      mobile.price + Settings.recommend.range)
     .limit(Settings.recommend.limit)
+  end
+
+  scope :hot_mobile, -> do
+    where(id: OrderDetail.select(:mobile_id).order("COUNT(*)").group(:mobile_id)
+                                                              .limit(3))
   end
 
   def resolution

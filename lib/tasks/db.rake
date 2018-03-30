@@ -29,7 +29,8 @@ namespace :db do
                     resolution_height: mobile.resolution_height,
                     maker_id: mobile.maker_id, avatar: open(mobile.avatar),
                     description: mobile.description,
-                    older_price: mobile.older_price, sale_time: mobile.sale_time
+                    older_price: mobile.older_price, sale_time: mobile.sale_time,
+                    hot_mobile: open(mobile.hot_mobile)
     end
 
     Settings.colors.each do |color|
@@ -49,6 +50,25 @@ namespace :db do
     Settings.images.each do |image|
       Image.create mobile_image: open(image.mobile_image),
                    mobile_id: image.mobile_id
+    end
+
+    Settings.citys.each do |city|
+      City.create name: city.name
+    end
+
+    Settings.districts.each do |district|
+      District.create name: district.name, city_id: district.city_id
+    end
+
+    Settings.shops.each do |shop|
+      Shop.create address: shop.address, city_id: shop.city_id,
+                  district_id: shop.district_id
+    end
+
+    Settings.shop_mobiles.each do |shop_mobile|
+      ShopMobile.create amount: shop_mobile.amount,
+                        mobile_id: shop_mobile.mobile_id,
+                        shop_id: shop_mobile.shop_id
     end
   end
 end

@@ -131,6 +131,7 @@ ActiveRecord::Schema.define(version: 20180326050552) do
     t.datetime "updated_at", null: false
     t.bigint "maker_id"
     t.string "avatar"
+    t.string "hot_mobile"
     t.datetime "sale_time"
     t.integer "older_price"
     t.index ["maker_id"], name: "index_mobiles_on_maker_id"

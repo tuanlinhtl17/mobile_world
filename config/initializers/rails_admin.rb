@@ -57,7 +57,10 @@ RailsAdmin.config do |config|
 
     create do
       include_all_fields
-      include_fields :order_details, :comments, :shop_mobiles, :mobile_colors do
+      include_fields :order_details, :comments, :shop_mobiles, :mobile_colors,
+                     :rates_without_dimension, :raters_without_dimension,
+                     :rate_average_without_dimension, :quality_rates, :quality_raters,
+                     :quality_average  do
         visible false
       end
       field :review, :ck_editor

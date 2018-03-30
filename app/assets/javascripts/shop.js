@@ -1,4 +1,4 @@
-jQuery(function() {
+$(function() {
   const districts = $('#shop_district_id').html();
   return $('#shop_city_id').change(function() {
     const city = $('#shop_city_id :selected').text();

@@ -43,6 +43,12 @@ en:
       edit: "Edit information"
       profile: "Profile"
       home: "Home"
+    footer:
+      contact: "Contact information"
+      call_for_buy: "Call for buy"
+      call_to_complain: "Call to complain"
+      call_for_warranty: "Call for warranty"
+      technical_assistance: "Technical assistance"
     search:
       search: "Search"
       amount: "Found %{amount} matching products"
@@ -132,4 +138,4 @@ en:
         get_more_mobile: "to get more mobile"
         hi: "Hi"
         order_details: "Your order details is:"
-        cart_have: "Cart have" 
+        cart_have: "Cart have"

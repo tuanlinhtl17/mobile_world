@@ -34,6 +34,8 @@ vi:
   views:
     shared:
       explore_now: "Khám phá ngay"
+    home:
+      hot_mobile: "Điện thoại nổi bật"
     header:
       sign_in: "Đăng nhập"
       sign_up: "Đăng ký"
@@ -44,6 +46,12 @@ vi:
       profile: "Tài khoản"
       home: "Trang chủ"
       admin: "Trang admin"
+    footer:
+      contact: "Thông tin liên hệ"
+      call_for_buy: "Gọi mua hàng"
+      call_to_complain: "Gọi khiếu nại"
+      call_for_warranty: "Gọi bảo hành"
+      technical_assistance: "Hỗ trợ kỹ thuật"
     search:
       search: "Tìm kiếm"
       amount: "Tìm thấy %{amount} sản phẩm phù hợp"
